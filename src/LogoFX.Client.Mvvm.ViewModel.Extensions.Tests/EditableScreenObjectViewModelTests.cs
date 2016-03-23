@@ -3,8 +3,8 @@ using Caliburn.Micro;
 using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
 using LogoFX.Client.Mvvm.ViewModel.Services;
 using LogoFX.Client.Mvvm.ViewModel.Shared;
-using LogoFX.Client.Tests.NUnit;
-using LogoFX.Client.Tests.Shared.Caliburn.Micro;
+using LogoFX.Client.Testing.Integration.NUnit;
+using LogoFX.Client.Testing.Shared.Caliburn.Micro;
 using NUnit.Framework;
 
 namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
