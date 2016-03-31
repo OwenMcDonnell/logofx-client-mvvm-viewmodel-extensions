@@ -6,7 +6,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
     class TestBootstrapper : BootstrapperContainerBase<TestConductorViewModel,ExtendedSimpleContainerAdapter>
     {
         public TestBootstrapper(ExtendedSimpleContainerAdapter container)
-            :base(container, new BootstrapperCreationOptions
+            :base(container, new BootstrapperContainerCreationOptions
             {
                 UseApplication = false
             })
