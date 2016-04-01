@@ -6,12 +6,12 @@ using Solid.Practices.Middleware;
 namespace LogoFX.Client.Mvvm.ViewModel.Services
 {
     class RegisterViewModelCreatorServiceMiddleware<TRootViewModel, TIocContainerAdapter> :
-        IMiddleware<BootstrapperContainerBase<TRootViewModel, TIocContainerAdapter>> 
+        IMiddleware<IBootstrapperWithContainerAdapter<TRootViewModel, TIocContainerAdapter>> 
         where TRootViewModel : class 
         where TIocContainerAdapter : class, IIocContainer, IIocContainerAdapter, IBootstrapperAdapter, new()
     {
-        public BootstrapperContainerBase<TRootViewModel, TIocContainerAdapter> Apply(
-            BootstrapperContainerBase<TRootViewModel, TIocContainerAdapter> @object)
+        public IBootstrapperWithContainerAdapter<TRootViewModel, TIocContainerAdapter> Apply(
+            IBootstrapperWithContainerAdapter<TRootViewModel, TIocContainerAdapter> @object)
         {
             @object.ContainerAdapter.RegisterSingleton<IViewModelCreatorService, ViewModelCreatorService>();
             return @object;

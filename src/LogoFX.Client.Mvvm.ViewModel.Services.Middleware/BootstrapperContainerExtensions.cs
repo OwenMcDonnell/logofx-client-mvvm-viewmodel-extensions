@@ -16,9 +16,9 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
         /// <typeparam name="TIocContainerAdapter">The type of the ioc container adapter.</typeparam>
         /// <param name="bootstrapperContainer">The bootstrapper container.</param>
         /// <returns></returns>
-        public static BootstrapperContainerBase<TRootViewModel, TIocContainerAdapter> 
+        public static IBootstrapperWithContainerAdapter<TRootViewModel, TIocContainerAdapter> 
             UseViewModelCreatorService<TRootViewModel, TIocContainerAdapter>
-            (this BootstrapperContainerBase<TRootViewModel, TIocContainerAdapter> bootstrapperContainer)
+            (this IBootstrapperWithContainerAdapter<TRootViewModel, TIocContainerAdapter> bootstrapperContainer)
             where TRootViewModel : class
             where TIocContainerAdapter : class, IIocContainer, IIocContainerAdapter, IBootstrapperAdapter, new()
         {
