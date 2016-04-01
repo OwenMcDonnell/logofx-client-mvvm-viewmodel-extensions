@@ -1,5 +1,7 @@
 using System;
+#if NET45
 using System.ComponentModel;
+#endif
 using System.Threading.Tasks;
 using LogoFX.Client.Mvvm.Model.Contracts;
 using LogoFX.Client.Mvvm.ViewModel.Contracts;

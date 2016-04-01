@@ -1,5 +1,7 @@
 ﻿using System;
+#if NET45
 using System.ComponentModel;
+#endif
 using System.Threading.Tasks;
 using System.Windows.Input;
 using LogoFX.Client.Mvvm.Commanding;

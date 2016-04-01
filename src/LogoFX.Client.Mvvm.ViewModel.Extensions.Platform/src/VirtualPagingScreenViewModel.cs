@@ -1,5 +1,7 @@
 ﻿using System;
+#if NET45
 using System.ComponentModel;
+#endif
 #if WINDOWS_UWP || NETFX_CORE
 using Windows.UI.Xaml.Data;
 #endif

@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 
 namespace LogoFX.Client.Mvvm.ViewModel.Services
 {
@@ -22,7 +21,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
         /// <summary>
         /// Gets or sets the root folder where the browsing starts from.
         /// </summary>
-        Environment.SpecialFolder RootFolder { get; set; }
+        System.Environment.SpecialFolder RootFolder { get; set; }
 
 #endif
         /// <summary>

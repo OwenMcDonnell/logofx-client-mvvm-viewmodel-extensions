@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{2680E2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Mvvm.ViewModel.Extensions.Platform.UWP", "LogoFX.Client.Mvvm.ViewModel.Extensions.Platform\uwp\LogoFX.Client.Mvvm.ViewModel.Extensions.Platform.UWP.csproj", "{9FB1A920-4022-45A2-80DC-3C0A42A2C4AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Mvvm.ViewModel.Services.Middleware.Platform.NET45", "LogoFX.Client.Mvvm.ViewModel.Services.Middleware.Platform\net45\LogoFX.Client.Mvvm.ViewModel.Services.Middleware.Platform.NET45.csproj", "{336492DF-7F9D-402A-8DB9-D268C90B2388}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Mvvm.ViewModel.Services.Middleware.Platform.UWP", "LogoFX.Client.Mvvm.ViewModel.Services.Middleware.Platform\uwp\LogoFX.Client.Mvvm.ViewModel.Services.Middleware.Platform.UWP.csproj", "{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +169,38 @@ Global
 		{9FB1A920-4022-45A2-80DC-3C0A42A2C4AB}.Release|x64.Build.0 = Release|x64
 		{9FB1A920-4022-45A2-80DC-3C0A42A2C4AB}.Release|x86.ActiveCfg = Release|x86
 		{9FB1A920-4022-45A2-80DC-3C0A42A2C4AB}.Release|x86.Build.0 = Release|x86
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Debug|ARM.Build.0 = Debug|Any CPU
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Debug|x64.Build.0 = Debug|Any CPU
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Debug|x86.Build.0 = Debug|Any CPU
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Release|Any CPU.Build.0 = Release|Any CPU
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Release|ARM.ActiveCfg = Release|Any CPU
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Release|ARM.Build.0 = Release|Any CPU
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Release|x64.ActiveCfg = Release|Any CPU
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Release|x64.Build.0 = Release|Any CPU
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Release|x86.ActiveCfg = Release|Any CPU
+		{336492DF-7F9D-402A-8DB9-D268C90B2388}.Release|x86.Build.0 = Release|Any CPU
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Debug|ARM.ActiveCfg = Debug|ARM
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Debug|ARM.Build.0 = Debug|ARM
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Debug|x64.ActiveCfg = Debug|x64
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Debug|x64.Build.0 = Debug|x64
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Debug|x86.ActiveCfg = Debug|x86
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Debug|x86.Build.0 = Debug|x86
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Release|ARM.ActiveCfg = Release|ARM
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Release|ARM.Build.0 = Release|ARM
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Release|x64.ActiveCfg = Release|x64
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Release|x64.Build.0 = Release|x64
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Release|x86.ActiveCfg = Release|x86
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -178,5 +214,7 @@ Global
 		{8FC658E5-3ACD-4297-907A-BEAFC031865B} = {8D9B8E75-4022-469F-BC09-B7A47E8DBA70}
 		{F7E89E24-85A4-4B72-B726-AF623A039E3D} = {4020C2D3-429B-4C64-A0CB-D830DCAB2FCB}
 		{9FB1A920-4022-45A2-80DC-3C0A42A2C4AB} = {4020C2D3-429B-4C64-A0CB-D830DCAB2FCB}
+		{336492DF-7F9D-402A-8DB9-D268C90B2388} = {8D9B8E75-4022-469F-BC09-B7A47E8DBA70}
+		{EFE6BF96-C4C3-4DA9-A3C7-6B984648F094} = {8D9B8E75-4022-469F-BC09-B7A47E8DBA70}
 	EndGlobalSection
 EndGlobal
