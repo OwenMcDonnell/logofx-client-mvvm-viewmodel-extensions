@@ -26,5 +26,5 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
             @object.ContainerAdapter.RegisterSingleton<IViewModelCreatorService, ViewModelCreatorService>();
             return @object;
         }
-    }   
+    }
 }
