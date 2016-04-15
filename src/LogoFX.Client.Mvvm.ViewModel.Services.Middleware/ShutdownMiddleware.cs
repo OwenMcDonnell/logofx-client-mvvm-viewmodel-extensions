@@ -8,10 +8,10 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
     /// Middleware that's responsible for registering 
     /// <see cref="IShutdownService"/> inside the ioc container adapter.
     /// </summary>
-    /// <typeparam name="TRootViewModel">The type of the root view model.</typeparam>
+    /// <typeparam name="TRootObject">The type of the root object.</typeparam>
     /// <typeparam name="TIocContainerAdapter">The type of the ioc container adapter.</typeparam>    
-    public class ShutdownMiddleware<TRootViewModel, TIocContainerAdapter> : 
-        IMiddleware<IBootstrapperWithContainerAdapter<TRootViewModel, TIocContainerAdapter>>
+    public class ShutdownMiddleware<TRootObject, TIocContainerAdapter> : 
+        IMiddleware<IBootstrapperWithContainerAdapter<TRootObject, TIocContainerAdapter>>
         where TIocContainerAdapter : IIocContainer
     {
         /// <summary>
@@ -19,8 +19,8 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
         /// </summary>
         /// <param name="object">The object.</param>
         /// <returns/>
-        public IBootstrapperWithContainerAdapter<TRootViewModel, TIocContainerAdapter>
-            Apply(IBootstrapperWithContainerAdapter<TRootViewModel, TIocContainerAdapter> @object)
+        public IBootstrapperWithContainerAdapter<TRootObject, TIocContainerAdapter>
+            Apply(IBootstrapperWithContainerAdapter<TRootObject, TIocContainerAdapter> @object)
         {
             if (@object is IShutdownService)
             {

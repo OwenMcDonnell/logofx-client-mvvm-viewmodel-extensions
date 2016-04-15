@@ -12,18 +12,18 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
         /// <summary>
         /// Uses the view model creator service middleware.
         /// </summary>
-        /// <typeparam name="TRootViewModel">The type of the root view model.</typeparam>
+        /// <typeparam name="TRootObject">The type of the root object.</typeparam>
         /// <typeparam name="TIocContainerAdapter">The type of the ioc container adapter.</typeparam>
         /// <param name="bootstrapperContainer">The bootstrapper container.</param>
         /// <returns></returns>
-        public static IBootstrapperWithContainerAdapter<TRootViewModel, TIocContainerAdapter> 
-            UseViewModelCreatorService<TRootViewModel, TIocContainerAdapter>
-            (this IBootstrapperWithContainerAdapter<TRootViewModel, TIocContainerAdapter> bootstrapperContainer)
-            where TRootViewModel : class
+        public static IBootstrapperWithContainerAdapter<TRootObject, TIocContainerAdapter> 
+            UseViewModelCreatorService<TRootObject, TIocContainerAdapter>
+            (this IBootstrapperWithContainerAdapter<TRootObject, TIocContainerAdapter> bootstrapperContainer)
+            where TRootObject : class
             where TIocContainerAdapter : class, IIocContainer, IIocContainerAdapter, IBootstrapperAdapter, new()
         {
             return bootstrapperContainer.Use(
-                new RegisterViewModelCreatorServiceMiddleware<TRootViewModel, TIocContainerAdapter>());            
+                new RegisterViewModelCreatorServiceMiddleware<TRootObject, TIocContainerAdapter>());            
         }        
     }
 }
