@@ -23,13 +23,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
         {
             base.OnAfterTeardown();
             TestHelper.Teardown();
-        }
-
-        protected override void OnCreateBootstrapperOverride(TestBootstrapper bootstrapper)
-        {
-            base.OnCreateBootstrapperOverride(bootstrapper);
-            bootstrapper.Initialize();
-        }
+        }        
 
         [Test]        
         public void ModelIsChanged_WhenViewModelIsClosed_MessageBoxIsDisplayed()
