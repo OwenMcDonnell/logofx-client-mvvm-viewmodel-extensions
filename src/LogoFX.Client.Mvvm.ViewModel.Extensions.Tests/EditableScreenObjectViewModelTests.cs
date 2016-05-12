@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using Caliburn.Micro;
-using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
 using LogoFX.Client.Mvvm.ViewModel.Services;
 using LogoFX.Client.Mvvm.ViewModel.Shared;
 using LogoFX.Client.Testing.Integration.NUnit;
