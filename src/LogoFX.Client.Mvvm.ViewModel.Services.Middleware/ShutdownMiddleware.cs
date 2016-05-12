@@ -23,7 +23,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
         {
             if (@object is IShutdownService)
             {
-                @object.ContainerAdapter.RegisterInstance(typeof(IShutdownService), @object);
+                @object.Registrator.RegisterInstance(typeof(IShutdownService), @object);
             }            
             return @object;
         }

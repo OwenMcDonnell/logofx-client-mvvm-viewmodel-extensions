@@ -20,7 +20,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
         public IBootstrapperWithContainerAdapter<TIocContainerAdapter> Apply(
             IBootstrapperWithContainerAdapter<TIocContainerAdapter> @object)
         {
-            @object.ContainerAdapter.RegisterSingleton<IViewModelCreatorService, ViewModelCreatorService>();
+            @object.Registrator.RegisterSingleton<IViewModelCreatorService, ViewModelCreatorService>();
             return @object;
         }
     }
