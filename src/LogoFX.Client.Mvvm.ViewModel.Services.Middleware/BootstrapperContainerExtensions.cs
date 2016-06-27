@@ -10,32 +10,29 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
     {
         /// <summary>
         /// Uses the view model creator service middleware.
-        /// </summary>        
-        /// <typeparam name="TIocContainerAdapter">The type of the ioc container adapter.</typeparam>
+        /// </summary>
         /// <param name="bootstrapperContainer">The bootstrapper container.</param>
         /// <returns></returns>
-        public static IBootstrapperWithContainerAdapter<TIocContainerAdapter> 
-            UseViewModelCreatorService<TIocContainerAdapter>
-            (this IBootstrapperWithContainerAdapter<TIocContainerAdapter> bootstrapperContainer)            
-            where TIocContainerAdapter : class, IIocContainer
+        public static IBootstrapperWithContainerRegistrator
+            UseViewModelCreatorService(this IBootstrapperWithContainerRegistrator bootstrapperContainer)
         {
             return bootstrapperContainer.Use(
-                new RegisterViewModelCreatorServiceMiddleware<TIocContainerAdapter>());            
+                new RegisterViewModelCreatorServiceMiddleware());            
         }
 
         /// <summary>
         /// Uses the shutdown middleware.
         /// </summary>        
         /// <typeparam name="TIocContainerAdapter">The type of the ioc container adapter.</typeparam>
-        /// <param name="bootstrapperContainer">The bootstrapper container.</param>
+        /// <param name="bootstrapper">The bootstrapper container.</param>
         /// <returns></returns>
-        public static IBootstrapperWithContainerAdapter<TIocContainerAdapter>
+        public static IBootstrapperWithContainerRegistrator
             UseShutdown<TIocContainerAdapter>
-            (this IBootstrapperWithContainerAdapter<TIocContainerAdapter> bootstrapperContainer)
+            (this IBootstrapperWithContainerRegistrator bootstrapper)
             where TIocContainerAdapter : class, IIocContainer
         {
-            return bootstrapperContainer.Use(
-                new ShutdownMiddleware<TIocContainerAdapter>());
+            return bootstrapper.Use(
+                new ShutdownMiddleware());
         }
     }
 }
