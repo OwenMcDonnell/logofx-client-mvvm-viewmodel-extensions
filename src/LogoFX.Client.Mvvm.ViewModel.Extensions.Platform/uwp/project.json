@@ -1,6 +1,6 @@
 ﻿{
   "dependencies": {
-    "Caliburn.Micro": "3.0.0",
+    "Caliburn.Micro": "3.0.1",
     "LogoFX.Client.Mvvm.Commanding": "1.0.5",
     "LogoFX.Client.Mvvm.Model": "1.0.9",
     "LogoFX.Client.Mvvm.ViewModel": "1.0.5",
