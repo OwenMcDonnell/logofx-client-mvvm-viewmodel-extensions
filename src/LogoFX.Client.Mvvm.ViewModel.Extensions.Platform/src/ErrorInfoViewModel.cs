@@ -33,7 +33,12 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
         /// <param name="model">The model.</param>
         protected ErrorInfoViewModel(T model) : base(model)
         {
-            var properties = GetType().GetProperties();
+            var properties = GetType()
+#if WINDOWS_APP
+                .GetTypeInfo().DeclaredProperties;
+#else
+            .GetProperties();
+#endif
             foreach (var propertyInfo in properties)
             {
                 var shouldDisplayAttributes =

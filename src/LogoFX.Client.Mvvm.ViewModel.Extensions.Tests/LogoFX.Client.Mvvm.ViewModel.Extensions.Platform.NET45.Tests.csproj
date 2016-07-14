@@ -118,8 +118,8 @@
       <HintPath>..\packages\LogoFX.Client.Tests.Integration.NUnit.1.2.0\lib\net45\LogoFX.Client.Testing.Integration.NUnit.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="LogoFX.Client.Testing.Shared.Caliburn.Micro.Platform, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Tests.Shared.Caliburn.Micro.1.0.9\lib\net45\LogoFX.Client.Testing.Shared.Caliburn.Micro.Platform.dll</HintPath>
+    <Reference Include="LogoFX.Client.Testing.Shared.Caliburn.Micro.Platform, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Tests.Shared.Caliburn.Micro.1.0.10\lib\net45\LogoFX.Client.Testing.Shared.Caliburn.Micro.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Shared.Platform, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
