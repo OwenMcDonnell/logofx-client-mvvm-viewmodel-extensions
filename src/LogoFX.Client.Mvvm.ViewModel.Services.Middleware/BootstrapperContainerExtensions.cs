@@ -1,5 +1,5 @@
-﻿using LogoFX.Bootstrapping;
-using Solid.Practices.IoC;
+﻿using Solid.Bootstrapping;
+using Solid.Extensibility;
 
 namespace LogoFX.Client.Mvvm.ViewModel.Services
 {
@@ -13,26 +13,25 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
         /// </summary>
         /// <param name="bootstrapperContainer">The bootstrapper container.</param>
         /// <returns></returns>
-        public static IBootstrapperWithContainerRegistrator
-            UseViewModelCreatorService(this IBootstrapperWithContainerRegistrator bootstrapperContainer)
+        public static TBootstrapper
+            UseViewModelCreatorService<TBootstrapper>(this TBootstrapper bootstrapperContainer)
+            where TBootstrapper : class, IExtensible<TBootstrapper>, IHaveContainerRegistrator
         {
             return bootstrapperContainer.Use(
-                new RegisterViewModelCreatorServiceMiddleware());            
+                new RegisterViewModelCreatorServiceMiddleware<TBootstrapper>());            
         }
 
         /// <summary>
         /// Uses the shutdown middleware.
-        /// </summary>        
-        /// <typeparam name="TIocContainerAdapter">The type of the ioc container adapter.</typeparam>
+        /// </summary>
         /// <param name="bootstrapper">The bootstrapper container.</param>
         /// <returns></returns>
-        public static IBootstrapperWithContainerRegistrator
-            UseShutdown<TIocContainerAdapter>
-            (this IBootstrapperWithContainerRegistrator bootstrapper)
-            where TIocContainerAdapter : class, IIocContainer
+        public static TBootstrapper
+            UseShutdown<TBootstrapper>(this TBootstrapper bootstrapper) 
+            where TBootstrapper : class, IExtensible<TBootstrapper>, IHaveContainerRegistrator
         {
             return bootstrapper.Use(
-                new ShutdownMiddleware());
+                new ShutdownMiddleware<TBootstrapper>());
         }
     }
 }

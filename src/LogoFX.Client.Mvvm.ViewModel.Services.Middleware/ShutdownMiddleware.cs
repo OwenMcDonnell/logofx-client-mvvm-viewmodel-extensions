@@ -1,4 +1,4 @@
-﻿using LogoFX.Bootstrapping;
+﻿using Solid.Bootstrapping;
 using Solid.Practices.Middleware;
 
 namespace LogoFX.Client.Mvvm.ViewModel.Services
@@ -7,16 +7,16 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
     /// Middleware that's responsible for registering 
     /// <see cref="IShutdownService"/> into the ioc container registrator.
     /// </summary>
-    public class ShutdownMiddleware : 
-        IMiddleware<IBootstrapperWithContainerRegistrator>
+    public class ShutdownMiddleware<TBootstrapper> : 
+        IMiddleware<TBootstrapper> where TBootstrapper : class, IHaveContainerRegistrator
     {
         /// <summary>
         /// Applies the middleware on the specified object.
         /// </summary>
         /// <param name="object">The object.</param>
         /// <returns/>
-        public IBootstrapperWithContainerRegistrator
-            Apply(IBootstrapperWithContainerRegistrator @object)
+        public TBootstrapper
+            Apply(TBootstrapper @object)
         {
             if (@object is IShutdownService)
             {
