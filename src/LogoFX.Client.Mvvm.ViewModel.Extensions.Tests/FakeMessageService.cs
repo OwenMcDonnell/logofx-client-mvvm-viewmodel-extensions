@@ -10,7 +10,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
     class FakeMessageService : IMessageService
     {
         public bool WasCalled { get; private set; }
-        private MessageResult _messageResult;
+        private MessageResult _messageResult = MessageResult.Yes;
 
         public MessageResult Show(string message, string caption = "", MessageButton button = MessageButton.OK, MessageImage icon = MessageImage.None)
         {

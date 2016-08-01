@@ -6,7 +6,7 @@ using Solid.Practices.Scheduling;
 
 namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
 {
-    class TestConductorViewModel : Conductor<object>.Collection.OneActive
+    public class TestConductorViewModel : Conductor<object>.Collection.OneActive
     {
         
     }

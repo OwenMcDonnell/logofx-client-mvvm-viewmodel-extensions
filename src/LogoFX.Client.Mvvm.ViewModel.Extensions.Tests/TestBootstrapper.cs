@@ -4,8 +4,8 @@ using Solid.Bootstrapping;
 using Solid.Practices.IoC;
 
 namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
-{    
-    class TestBootstrapper : BootstrapperContainerBase<ExtendedSimpleContainerAdapter>
+{
+    public class TestBootstrapper : BootstrapperContainerBase<ExtendedSimpleContainerAdapter>
         .WithRootObject<TestConductorViewModel>, IHaveContainerResolver
     {
         private static readonly ExtendedSimpleContainerAdapter _container = new ExtendedSimpleContainerAdapter();

@@ -1,15 +1,15 @@
 ﻿using System.Linq;
 using Caliburn.Micro;
+using FluentAssertions;
 using LogoFX.Client.Mvvm.ViewModel.Services;
 using LogoFX.Client.Mvvm.ViewModel.Shared;
-using LogoFX.Client.Testing.Integration.NUnit;
+using LogoFX.Client.Testing.Integration.xUnit;
 using LogoFX.Client.Testing.Shared.Caliburn.Micro;
-using NUnit.Framework;
+using Xunit;
 
 namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
-{
-    [TestFixture]
-    class EditableScreenObjectViewModelTests : IntegrationTestsBase<TestConductorViewModel, TestBootstrapper>
+{    
+    public class EditableScreenObjectViewModelTests : IntegrationTestsBase<TestConductorViewModel, TestBootstrapper>
     {
         //Note: may use here IntegrationTestsBaseWithActivation as well - package still not available.
         protected override TestConductorViewModel CreateRootObjectOverride(TestConductorViewModel rootObject)
@@ -24,7 +24,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
             TestHelper.Teardown();
         }        
 
-        [Test]        
+        [Fact]        
         public void ModelIsChanged_WhenViewModelIsClosed_MessageBoxIsDisplayed()
         {
             var simpleModel = new SimpleEditableModel();
@@ -37,10 +37,10 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
             screenObjectViewModel.CloseCommand.Execute(null);
 
             var wasCalled = mockMessageService.WasCalled;
-            Assert.IsTrue(wasCalled);
+            wasCalled.Should().BeTrue();            
         }
 
-        [Test]        
+        [Fact]        
         public void ModelIsNotChanged_WhenViewModelIsClosed_MessageBoxIsNotDisplayed()
         {
             var simpleModel = new SimpleEditableModel();
@@ -52,10 +52,10 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
             screenObjectViewModel.CloseCommand.Execute(null);
 
             var wasCalled = mockMessageService.WasCalled;
-            Assert.IsFalse(wasCalled);
+            wasCalled.Should().BeFalse();
         }
 
-        [Test]        
+        [Fact]        
         public void ModelIsChanged_WhenViewModelIsClosedAndMessageResultIsYes_ModelIsSaved()
         {
             var simpleModel = new SimpleEditableModel();
@@ -70,13 +70,12 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
             screenObjectViewModel.CloseCommand.Execute(null);
 
             var isDirty = simpleModel.IsDirty;
-            Assert.False(isDirty);
+            isDirty.Should().BeFalse();
             var actualValue = simpleModel.Name;
-            Assert.AreEqual(expectedValue, actualValue);
+            actualValue.Should().Be(expectedValue);
         }
 
-        [Test]
-        [RequiresSTA]
+        [Fact]        
         public void ModelIsChanged_WhenViewModelIsClosedAndMessageResultIsNo_ModelIsNotSaved()
         {
             string initialValue = string.Empty;
@@ -92,13 +91,12 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
             screenObjectViewModel.CloseCommand.Execute(null);
 
             var isDirty = simpleModel.IsDirty;
-            Assert.False(isDirty);
+            isDirty.Should().BeFalse();
             var actualValue = simpleModel.Name;
-            Assert.AreEqual(initialValue, actualValue);
+            actualValue.Should().Be(initialValue);
         }
 
-        [Test]
-        [RequiresSTA]
+        [Fact]        
         public void ModelIsChanged_WhenViewModelIsClosedAndMessageResultIsCancel_ModelIsSaved()
         {
             string initialValue = string.Empty;
@@ -114,13 +112,12 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
             screenObjectViewModel.CloseCommand.Execute(null);            
 
             var isDirty = simpleModel.IsDirty;
-            Assert.True(isDirty);
+            isDirty.Should().BeTrue();
             var actualValue = simpleModel.Name;
-            Assert.AreEqual(DataGenerator.ValidName, actualValue);
+            actualValue.Should().Be(DataGenerator.ValidName);            
         }
 
-        [Test]
-        [RequiresSTA]
+        [Fact]        
         public void ModelIsChanged_WhenViewModelIsClosedAndMessageResultIsNo_ThenOnChangesCancelingIsCalled()
         {
             string initialValue = string.Empty;
@@ -136,10 +133,10 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
             screenObjectViewModel.CloseCommand.Execute(null);
 
             var wasCalled = screenObjectViewModel.WasCancelingChangesCalled;
-            Assert.True(wasCalled);
+            wasCalled.Should().BeTrue();
         }
 
-        [Test]
+        [Fact]
         public void WhenModelIsChangedAndChangesAreAppliedAndModelIsChangedAndChangesAreCancelled_ThenCorrectModelIsDisplayed()
         {
             var initialPhones = new[] { 546, 432 };
@@ -156,7 +153,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
 
             var phones = ((ICompositeEditableModel)compositeModel).Phones.ToArray();
             var expectedPhones = new[] { 546, 432, 647 };
-            CollectionAssert.AreEqual(expectedPhones, phones);
+            phones.ShouldBeEquivalentTo(expectedPhones);            
         }
     }
 }
