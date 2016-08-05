@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using LogoFX.Client.Mvvm.ViewModel.Contracts;
 using Solid.Practices.IoC;
+using IViewModelFactory = LogoFX.Client.Mvvm.ViewModelFactory.IViewModelFactory;
 
 namespace LogoFX.Client.Mvvm.ViewModel.Services
 {
