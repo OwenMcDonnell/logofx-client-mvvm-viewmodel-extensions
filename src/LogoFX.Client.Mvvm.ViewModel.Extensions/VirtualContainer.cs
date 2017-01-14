@@ -1,5 +1,5 @@
 using System;
-using Caliburn.Micro;
+using LogoFX.Client.Core;
 
 namespace LogoFX.Client.Mvvm.ViewModel.Extensions
 {
@@ -7,7 +7,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
     /// Represents virtual items container.
     /// </summary>
     /// <typeparam name="T">The type of item.</typeparam>
-    public sealed partial class VirtualContainer<T> : PropertyChangedBase
+    public sealed partial class VirtualContainer<T> : NotifyPropertyChangedBase<VirtualContainer<T>>
         where T : class
     {       
         /// <summary>

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using Caliburn.Micro;
+using LogoFX.Client.Core;
 
 namespace LogoFX.Client.Mvvm.ViewModel.Extensions
 {
@@ -10,7 +10,8 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
     /// Represents base class for paging list manager.
     /// </summary>
     /// <typeparam name="TItem">The type of the item.</typeparam>
-    public abstract class PagingItemListViewModelBase<TItem> : PropertyChangedBase, IList<TItem>, IList, INotifyCollectionChanged
+    public abstract class PagingItemListViewModelBase<TItem> : 
+        NotifyPropertyChangedBase<PagingItemListViewModelBase<TItem>>, IList<TItem>, IList, INotifyCollectionChanged
     {
         #region Fields
 

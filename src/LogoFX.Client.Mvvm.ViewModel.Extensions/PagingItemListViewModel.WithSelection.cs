@@ -154,7 +154,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
                     {
                         if (((uint)_selectionMode & SingleSelectionMask) != 0)
                         {
-                            _selectedItems.Apply(a =>
+                            _selectedItems.ForEach(a =>
                             {
                                 a.IsSelected = false;
                             });
@@ -258,14 +258,14 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
                 switch (e.Action)
                 {
                     case NotifyCollectionChangedAction.Add:
-                        e.NewItems.Cast<TItem>().Apply(addHandler);
+                        e.NewItems.Cast<TItem>().ForEach(addHandler);
                         break;
                     case NotifyCollectionChangedAction.Remove:
-                        e.OldItems.Cast<TItem>().Apply(removeHandler);
+                        e.OldItems.Cast<TItem>().ForEach(removeHandler);
                         break;
                     case NotifyCollectionChangedAction.Replace:
-                        e.OldItems.Cast<TItem>().Apply(removeHandler);
-                        e.NewItems.Cast<TItem>().Apply(addHandler);
+                        e.OldItems.Cast<TItem>().ForEach(removeHandler);
+                        e.NewItems.Cast<TItem>().ForEach(addHandler);
                         break;
                     case NotifyCollectionChangedAction.Reset:
                         Debug.Assert(false, "We should never be here. Check base class impl");
