@@ -343,11 +343,6 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
             }
         }       
 
-
-#if SILVERLIGHT
-        public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
-#endif
-
         object IModelWrapper.Model
         {
             get { return _model; }
