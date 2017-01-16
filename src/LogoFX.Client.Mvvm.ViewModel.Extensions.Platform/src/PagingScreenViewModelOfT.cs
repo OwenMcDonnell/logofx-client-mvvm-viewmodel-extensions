@@ -525,15 +525,16 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
         /// <returns></returns>
         protected virtual ICollectionView CreateCollectionView()
         {
+            var collectionView =
 #if NET45
-            var collectionView = CollectionViewSource.GetDefaultView(Items);
-            collectionView.Filter += o => OnItemFilter((TItem)o);
-            return collectionView;
+                CollectionViewSource.GetDefaultView(Items);
 #endif
 #if WINDOWS_UWP || NETFX_CORE
-            return null;
+            new ListCollectionView(Items);
 #endif
 
+            collectionView.Filter += o => OnItemFilter((TItem)o);
+            return collectionView;
         }
 
         private ICollectionView _collectionView;
