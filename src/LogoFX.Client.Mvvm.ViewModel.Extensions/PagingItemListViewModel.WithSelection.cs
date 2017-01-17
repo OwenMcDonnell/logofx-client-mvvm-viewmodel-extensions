@@ -6,7 +6,7 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
-using Caliburn.Micro;
+using System.Windows.Threading;
 using LogoFX.Client.Core;
 using LogoFX.Client.Mvvm.ViewModel.Contracts;
 using LogoFX.Core;
@@ -185,7 +185,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
             {
                 if (args.PropertyName == "IsSelected" && sender is ISelectable)
                 {
-                    Execute.OnUIThread(() => HandleItemSelectionChanged((TItem)sender, ((ISelectable)sender).IsSelected));
+                    Dispatch.Current.OnUiThread(() => HandleItemSelectionChanged((TItem)sender, ((ISelectable)sender).IsSelected));
                 }
             }
 
