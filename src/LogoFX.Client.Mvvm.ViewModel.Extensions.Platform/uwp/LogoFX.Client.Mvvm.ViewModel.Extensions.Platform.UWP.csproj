@@ -163,7 +163,7 @@
     <EmbeddedResource Include="Properties\LogoFX.Client.Mvvm.ViewModel.Extensions.Platform.UWP.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Extensions\LogoFX.Client.Mvvm.ViewModel.Extensions.csproj">
+    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Extensions\portable\LogoFX.Client.Mvvm.ViewModel.Extensions.csproj">
       <Project>{52314B3B-DDB3-48FD-A735-3ADCF70D4014}</Project>
       <Name>LogoFX.Client.Mvvm.ViewModel.Extensions</Name>
     </ProjectReference>

@@ -179,8 +179,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Extensions\LogoFX.Client.Mvvm.ViewModel.Extensions.csproj">
-      <Project>{52314b3b-ddb3-48fd-a735-3adcf70d4014}</Project>
+    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Extensions\portable\LogoFX.Client.Mvvm.ViewModel.Extensions.csproj">
+      <Project>{52314B3B-DDB3-48FD-A735-3ADCF70D4014}</Project>
       <Name>LogoFX.Client.Mvvm.ViewModel.Extensions</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Shared\LogoFX.Client.Mvvm.ViewModel.Shared.csproj">
