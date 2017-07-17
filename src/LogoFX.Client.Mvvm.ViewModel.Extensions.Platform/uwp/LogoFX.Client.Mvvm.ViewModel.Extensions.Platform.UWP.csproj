@@ -163,9 +163,9 @@
     <EmbeddedResource Include="Properties\LogoFX.Client.Mvvm.ViewModel.Extensions.Platform.UWP.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Extensions\portable\LogoFX.Client.Mvvm.ViewModel.Extensions.csproj">
-      <Project>{52314B3B-DDB3-48FD-A735-3ADCF70D4014}</Project>
-      <Name>LogoFX.Client.Mvvm.ViewModel.Extensions</Name>
+    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Extensions\uwp\LogoFX.Client.Mvvm.ViewModel.Extensions.UWP.csproj">
+      <Project>{719BFD04-640F-4044-BDDF-A6D7C1A17F46}</Project>
+      <Name>LogoFX.Client.Mvvm.ViewModel.Extensions.UWP</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Shared\LogoFX.Client.Mvvm.ViewModel.Shared.csproj">
       <Project>{78cc7269-18eb-49c1-878b-00634a27a264}</Project>

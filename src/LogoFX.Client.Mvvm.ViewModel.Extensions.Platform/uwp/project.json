@@ -1,9 +1,11 @@
 ﻿{
   "dependencies": {
     "Caliburn.Micro": "3.0.3",
+    "Caliburn.Micro.Core": "3.0.3",
     "LogoFX.Client.Mvvm.Commanding": "1.0.6",
     "LogoFX.Client.Mvvm.Model": "1.0.11",
     "LogoFX.Client.Mvvm.ViewModel": "1.0.6",
+    "LogoFX.Client.Mvvm.ViewModel.Core": "1.0.6",
     "LogoFX.Core": "1.0.7",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
   },
