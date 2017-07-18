@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <AssemblyName>LogoFX.Client.Mvvm.ViewModel.Shared</AssemblyName>
+    <RootNamespace>LogoFX.Client.Mvvm.ViewModel.Shared</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\Bin\netstandard1.3\Release</OutputPath>
+    <DocumentationFile>..\..\Bin\netstandard1.3\Release\netstandard1.3\LogoFX.Client.Mvvm.ViewModel.Shared.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\src\MessageResult.cs" Link="MessageResult.cs" />
+  </ItemGroup>
+
+</Project>

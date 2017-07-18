@@ -154,9 +154,9 @@
     <EmbeddedResource Include="Properties\LogoFX.Client.Mvvm.ViewModel.Extensions.UWP.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Shared\LogoFX.Client.Mvvm.ViewModel.Shared.csproj">
-      <Project>{78CC7269-18EB-49C1-878B-00634A27A264}</Project>
-      <Name>LogoFX.Client.Mvvm.ViewModel.Shared</Name>
+    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Shared\netstandard1.3\LogoFX.Client.Mvvm.ViewModel.Shared.NETStandard13.csproj">
+      <Project>{34257B4D-DD6F-451F-B137-E869F800A552}</Project>
+      <Name>LogoFX.Client.Mvvm.ViewModel.Shared.NETStandard13</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

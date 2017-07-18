@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1B2EC639-365C-4AA1-8151-DED87A8B6113}</ProjectGuid>
+    <ProjectGuid>{9820486A-1746-4282-B0AA-69C7A0481E9B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogoFX.Client.Mvvm.ViewModel.Extensions.NET45</RootNamespace>
-    <AssemblyName>LogoFX.Client.Mvvm.ViewModel.Extensions.NET45</AssemblyName>
+    <RootNamespace>LogoFX.Client.Mvvm.ViewModel.Services</RootNamespace>
+    <AssemblyName>LogoFX.Client.Mvvm.ViewModel.Services</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -28,12 +28,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\Bin\net45\Release\LogoFX.Client.Mvvm.ViewModel.Extensions.NET45.xml</DocumentationFile>
+    <DocumentationFile>..\..\Bin\net45\Release\LogoFX.Client.Mvvm.ViewModel.Services.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Caliburn.Micro, Version=3.0.3.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Caliburn.Micro.Core.3.1.0\lib\net45\Caliburn.Micro.dll</HintPath>
-    </Reference>
     <Reference Include="LogoFX.Client.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LogoFX.Client.Core.Core.1.2.0-rc1\lib\net45\LogoFX.Client.Core.dll</HintPath>
     </Reference>
@@ -43,8 +40,23 @@
     <Reference Include="LogoFX.Client.Mvvm.ViewModel.Contracts, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LogoFX.Client.Mvvm.ViewModel.Core.1.1.0-rc1\lib\net45\LogoFX.Client.Mvvm.ViewModel.Contracts.dll</HintPath>
     </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.ViewModelFactory, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LogoFX.Client.Mvvm.ViewModelFactory.1.2.0-rc1\lib\net45\LogoFX.Client.Mvvm.ViewModelFactory.dll</HintPath>
+    </Reference>
     <Reference Include="LogoFX.Core, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LogoFX.Core.1.0.8-rc1\lib\net45\LogoFX.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Bootstrapping, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Solid.Bootstrapping.1.2.0-rc2\lib\net45\Solid.Bootstrapping.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Extensibility, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Solid.Extensibility.1.2.0-rc2\lib\net45\Solid.Extensibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.IoC, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Solid.Practices.IoC.1.2.0-rc3\lib\net45\Solid.Practices.IoC.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Middleware, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Solid.Practices.Middleware.1.2.0-rc2\lib\net45\Solid.Practices.Middleware.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -55,58 +67,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\src\BusyScreen.cs">
-      <Link>BusyScreen.cs</Link>
+    <Compile Include="..\src\IMessageService.cs">
+      <Link>IMessageService.cs</Link>
     </Compile>
-    <Compile Include="..\src\IPagingItem.cs">
-      <Link>IPagingItem.cs</Link>
+    <Compile Include="..\src\IShutdownService.cs">
+      <Link>IShutdownService.cs</Link>
     </Compile>
-    <Compile Include="..\src\IPagingViewModel.cs">
-      <Link>IPagingViewModel.cs</Link>
-    </Compile>
-    <Compile Include="..\src\ISaveChanges.cs">
-      <Link>ISaveChanges.cs</Link>
-    </Compile>
-    <Compile Include="..\src\IWithSelection.cs">
-      <Link>IWithSelection.cs</Link>
-    </Compile>
-    <Compile Include="..\src\Notifications\NotificationsHelper.cs">
-      <Link>Notifications\NotificationsHelper.cs</Link>
-    </Compile>
-    <Compile Include="..\src\PagingItemListViewModel.cs">
-      <Link>PagingItemListViewModel.cs</Link>
-    </Compile>
-    <Compile Include="..\src\PagingItemListViewModel.WithSelection.cs">
-      <Link>PagingItemListViewModel.WithSelection.cs</Link>
-    </Compile>
-    <Compile Include="..\src\PagingItemListViewModelBase.cs">
-      <Link>PagingItemListViewModelBase.cs</Link>
-    </Compile>
-    <Compile Include="..\src\PagingScreenViewModel.cs">
-      <Link>PagingScreenViewModel.cs</Link>
-    </Compile>
-    <Compile Include="..\src\ResultEventArgs.cs">
-      <Link>ResultEventArgs.cs</Link>
-    </Compile>
-    <Compile Include="..\src\ShouldDisplayErrorInfoAttribute.cs">
-      <Link>ShouldDisplayErrorInfoAttribute.cs</Link>
-    </Compile>
-    <Compile Include="..\src\VirtualContainer.Collection.cs">
-      <Link>VirtualContainer.Collection.cs</Link>
-    </Compile>
-    <Compile Include="..\src\VirtualContainer.cs">
-      <Link>VirtualContainer.cs</Link>
+    <Compile Include="..\src\ViewModelCreatorService.cs">
+      <Link>ViewModelCreatorService.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Shared\net45\LogoFX.Client.Mvvm.ViewModel.Shared.NET45.csproj">
       <Project>{35FA1912-11FA-4BA3-93AD-99382EA08C1A}</Project>
       <Name>LogoFX.Client.Mvvm.ViewModel.Shared.NET45</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

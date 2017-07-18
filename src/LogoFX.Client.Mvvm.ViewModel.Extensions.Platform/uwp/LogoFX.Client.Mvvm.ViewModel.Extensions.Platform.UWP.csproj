@@ -167,9 +167,9 @@
       <Project>{719BFD04-640F-4044-BDDF-A6D7C1A17F46}</Project>
       <Name>LogoFX.Client.Mvvm.ViewModel.Extensions.UWP</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Shared\LogoFX.Client.Mvvm.ViewModel.Shared.csproj">
-      <Project>{78cc7269-18eb-49c1-878b-00634a27a264}</Project>
-      <Name>LogoFX.Client.Mvvm.ViewModel.Shared</Name>
+    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Shared\netstandard1.3\LogoFX.Client.Mvvm.ViewModel.Shared.NETStandard13.csproj">
+      <Project>{34257b4d-dd6f-451f-b137-e869f800a552}</Project>
+      <Name>LogoFX.Client.Mvvm.ViewModel.Shared.NETStandard13</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
