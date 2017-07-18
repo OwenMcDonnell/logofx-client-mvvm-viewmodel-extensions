@@ -7,8 +7,8 @@
     <ProjectGuid>{1B2EC639-365C-4AA1-8151-DED87A8B6113}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogoFX.Client.Mvvm.ViewModel.Extensions.NET45</RootNamespace>
-    <AssemblyName>LogoFX.Client.Mvvm.ViewModel.Extensions.NET45</AssemblyName>
+    <RootNamespace>LogoFX.Client.Mvvm.ViewModel.Extensions</RootNamespace>
+    <AssemblyName>LogoFX.Client.Mvvm.ViewModel.Extensions</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -28,7 +28,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\Bin\net45\Release\LogoFX.Client.Mvvm.ViewModel.Extensions.NET45.xml</DocumentationFile>
+    <DocumentationFile>..\..\Bin\net45\Release\LogoFX.Client.Mvvm.ViewModel.Extensions.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Caliburn.Micro, Version=3.0.3.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
