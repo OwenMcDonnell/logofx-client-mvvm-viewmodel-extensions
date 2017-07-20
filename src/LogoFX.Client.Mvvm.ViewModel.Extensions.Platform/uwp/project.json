@@ -6,7 +6,7 @@
     "LogoFX.Client.Mvvm.Model": "1.1.0-rc1",
     "LogoFX.Client.Mvvm.ViewModel": "1.1.0-rc1",
     "LogoFX.Client.Mvvm.ViewModel.Core": "1.1.0-rc1",
-    "LogoFX.Core": "1.0.8-rc1",
+    "LogoFX.Core": "1.0.8-rc2",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.3"
   },
   "frameworks": {

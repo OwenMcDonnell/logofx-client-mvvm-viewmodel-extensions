@@ -8,7 +8,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
     /// <see cref="IShutdownService"/> into the ioc container registrator.
     /// </summary>
     public class ShutdownMiddleware<TBootstrapper> : 
-        IMiddleware<TBootstrapper> where TBootstrapper : class, IHaveContainerRegistrator
+        IMiddleware<TBootstrapper> where TBootstrapper : class, IHaveRegistrator
     {
         /// <summary>
         /// Applies the middleware on the specified object.

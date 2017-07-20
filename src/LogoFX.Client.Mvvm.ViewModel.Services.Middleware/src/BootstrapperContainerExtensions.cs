@@ -15,7 +15,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
         /// <returns></returns>
         public static TBootstrapper
             UseViewModelCreatorService<TBootstrapper>(this TBootstrapper bootstrapperContainer)
-            where TBootstrapper : class, IExtensible<TBootstrapper>, IHaveContainerRegistrator
+            where TBootstrapper : class, IExtensible<TBootstrapper>, IHaveRegistrator
         {
             return bootstrapperContainer.Use(
                 new RegisterViewModelCreatorServiceMiddleware<TBootstrapper>());            
@@ -28,7 +28,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
         /// <returns></returns>
         public static TBootstrapper
             UseShutdown<TBootstrapper>(this TBootstrapper bootstrapper) 
-            where TBootstrapper : class, IExtensible<TBootstrapper>, IHaveContainerRegistrator
+            where TBootstrapper : class, IExtensible<TBootstrapper>, IHaveRegistrator
         {
             return bootstrapper.Use(
                 new ShutdownMiddleware<TBootstrapper>());

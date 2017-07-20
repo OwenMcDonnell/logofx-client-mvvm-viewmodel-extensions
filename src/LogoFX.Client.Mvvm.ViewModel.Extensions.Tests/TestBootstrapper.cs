@@ -6,7 +6,7 @@ using Solid.Practices.IoC;
 namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
 {
     public class TestBootstrapper : BootstrapperContainerBase<ExtendedSimpleContainerAdapter>
-        .WithRootObject<TestConductorViewModel>, IHaveContainerResolver
+        .WithRootObject<TestConductorViewModel>, IHaveResolver
     {
         private static readonly ExtendedSimpleContainerAdapter _container = new ExtendedSimpleContainerAdapter();
 
