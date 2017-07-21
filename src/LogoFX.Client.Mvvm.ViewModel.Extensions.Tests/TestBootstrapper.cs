@@ -18,6 +18,6 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
         {                   
         }
 
-        public IIocContainerResolver Resolver => _container;
+        public IDependencyResolver Resolver => _container;
     }
 }

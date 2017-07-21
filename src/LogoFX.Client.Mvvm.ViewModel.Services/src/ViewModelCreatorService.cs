@@ -33,7 +33,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
     /// </summary>
     public class ViewModelCreatorService : IViewModelCreatorService
     {
-        private readonly IIocContainerResolver _resolver;
+        private readonly IDependencyResolver _resolver;
         private readonly IViewModelFactory _viewModelFactory;
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Services
         /// </summary>
         /// <param name="resolver">The resolver.</param>
         /// <param name="viewModelFactory">The view model factory.</param>
-        public ViewModelCreatorService(IIocContainerResolver resolver, IViewModelFactory viewModelFactory)
+        public ViewModelCreatorService(IDependencyResolver resolver, IViewModelFactory viewModelFactory)
         {
             _resolver = resolver;
             _viewModelFactory = viewModelFactory;
