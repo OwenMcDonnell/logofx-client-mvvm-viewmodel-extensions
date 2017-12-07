@@ -1,17 +1,14 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>LogoFX.Client.Mvvm.ViewModel.Services</AssemblyName>
     <RootNamespace>LogoFX.Client.Mvvm.ViewModel.Services</RootNamespace>
-    <Version>1.2.0</Version>
-    <AssemblyVersion>1.2.0</AssemblyVersion>
-    <FileVersion>1.2.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\..\Bin\netstandard1.3\Release</OutputPath>
-    <DocumentationFile>..\..\Bin\netstandard1.3\Release\netstandard1.3\LogoFX.Client.Mvvm.ViewModel.Services.xml</DocumentationFile>
+    <OutputPath>..\..\Bin\netstandard2.0\Release</OutputPath>
+    <DocumentationFile>..\..\Bin\netstandard2.0\Release\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Services.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,11 +19,10 @@
 
   <ItemGroup>
     <PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory" Version="1.2.1-rc1" />
-    <PackageReference Include="Solid.Practices.IoC" Version="1.2.1-rc1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Shared\netstandard1.3\LogoFX.Client.Mvvm.ViewModel.Shared.NETStandard13.csproj" />
+    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Shared\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Shared.NETStandard20.csproj" />
   </ItemGroup>
 
 </Project>
