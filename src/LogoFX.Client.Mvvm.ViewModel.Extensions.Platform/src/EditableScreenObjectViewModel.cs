@@ -1,7 +1,5 @@
 using System;
-#if NET45
 using System.ComponentModel;
-#endif
 using System.Threading.Tasks;
 using System.Windows.Input;
 using LogoFX.Client.Mvvm.Commanding;
@@ -16,14 +14,8 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
     /// Represents screen object view model which wraps an editable model.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class EditableScreenObjectViewModel<T> : ScreenObjectViewModel<T>, IEditableViewModel, ICanBeBusy
-#if NET45
-        ,IDataErrorInfo
-#endif
-        where T : IEditableModel, IHaveErrors
-#if NET45
-        ,IDataErrorInfo
-#endif
+    public abstract class EditableScreenObjectViewModel<T> : ScreenObjectViewModel<T>, IEditableViewModel, ICanBeBusy, IDataErrorInfo
+        where T : IEditableModel, IHaveErrors, IDataErrorInfo
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EditableScreenObjectViewModel{T}"/> class.
@@ -333,7 +325,6 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
 
         #endregion
 
-#if NET45
 #region IDataErrorInfo
 
         /// <summary>
@@ -359,7 +350,6 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
             get { return Model.Error; }
         }
 
-#endregion
-#endif
+        #endregion
     }
 }

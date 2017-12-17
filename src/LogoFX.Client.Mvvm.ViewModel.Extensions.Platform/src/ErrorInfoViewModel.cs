@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-#if WINDOWS_UWP || NETFX_CORE
 using System.Reflection;
-#endif
 using LogoFX.Client.Mvvm.Model.Contracts;
 using LogoFX.Core;
 
@@ -14,15 +12,9 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
     /// Represents screen object view model with custom error display logic.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class ErrorInfoViewModel<T> : ScreenObjectViewModel<T>
-#if NET45
-        , IDataErrorInfo
-#endif
-        where T :
-#if NET45
-        IDataErrorInfo, 
-#endif
-        IHaveErrors
+    public abstract class ErrorInfoViewModel<T> : ScreenObjectViewModel<T>, IDataErrorInfo
+        where T : IDataErrorInfo, IHaveErrors
+
     {
         private readonly ConcurrentDictionary<string, bool> _isPropertyChanged = new ConcurrentDictionary<string, bool>();
         private readonly HashSet<string> _interestingProperties = new HashSet<string>();
@@ -33,12 +25,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
         /// <param name="model">The model.</param>
         protected ErrorInfoViewModel(T model) : base(model)
         {
-            var properties = GetType()
-#if WINDOWS_APP
-                .GetTypeInfo().DeclaredProperties;
-#else
-            .GetProperties();
-#endif
+            var properties = GetType().GetTypeInfo().DeclaredProperties;
             foreach (var propertyInfo in properties)
             {
                 var shouldDisplayAttributes =
@@ -66,8 +53,6 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
                 _isPropertyChanged.TryUpdate(propertyChangedEventArgs.PropertyName, true, false);
             }
         }
-
-#if NET45
 
         /// <summary>
         /// Gets an error message indicating what is wrong with this object.
@@ -99,6 +84,5 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
                 return couldGetValue && value ? Model[columnName] : string.Empty;
             }
         }
-#endif
     }
 }

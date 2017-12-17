@@ -1,7 +1,5 @@
 using System;
-#if NET45
 using System.ComponentModel;
-#endif
 using System.Threading.Tasks;
 using LogoFX.Client.Mvvm.Model.Contracts;
 using LogoFX.Client.Mvvm.ViewModel.Contracts;
@@ -13,10 +11,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public abstract class EditablePagingItemViewModel<T> : EditableObjectViewModel<T>, IPagingItem
-        where T : IEditableModel, IHaveErrors
-#if NET45
-        , IDataErrorInfo
-#endif
+        where T : IEditableModel, IHaveErrors, IDataErrorInfo
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EditablePagingItemViewModel{T}"/> class.

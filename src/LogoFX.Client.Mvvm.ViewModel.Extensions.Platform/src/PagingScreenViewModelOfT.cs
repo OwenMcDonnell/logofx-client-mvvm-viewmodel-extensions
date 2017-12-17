@@ -529,7 +529,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
 #if NET45
                 CollectionViewSource.GetDefaultView(Items);
 #endif
-#if WINDOWS_UWP || NETFX_CORE
+#if WINDOWS_UWP || NETFX_CORE                
             new ListCollectionView(Items);
 #endif
 

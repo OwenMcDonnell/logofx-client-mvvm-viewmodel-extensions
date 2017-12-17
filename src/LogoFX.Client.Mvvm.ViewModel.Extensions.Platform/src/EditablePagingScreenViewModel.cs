@@ -1,7 +1,5 @@
 using System;
-#if NET45
 using System.ComponentModel;
-#endif
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Caliburn.Micro;
@@ -17,10 +15,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
     /// <typeparam name="TItem">The type of paging item.</typeparam>
     /// <typeparam name="TModel">The type of model.</typeparam>
     public abstract partial class EditablePagingScreenViewModel<TItem, TModel> : PagingScreenViewModel<TItem, TModel>
-        where TModel : class, IEditableModel, IHaveErrors
-#if NET45
-        , IDataErrorInfo
-#endif
+        where TModel : class, IEditableModel, IHaveErrors, IDataErrorInfo
         where TItem : EditablePagingItemViewModel<TModel>, IPagingItem
     {
 #region Commands
