@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>LogoFX.Client.Mvvm.ViewModel.Extensions</AssemblyName>
+    <RootNamespace>LogoFX.Client.Mvvm.ViewModel.Extensions</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\Bin\netstandard2.0\Release</OutputPath>
+    <DocumentationFile>..\..\Bin\netstandard2.0\Release\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Extensions.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\src\IPagingItem.cs" Link="IPagingItem.cs" />
+    <Compile Include="..\src\IPagingViewModel.cs" Link="IPagingViewModel.cs" />
+    <Compile Include="..\src\ISaveChanges.cs" Link="ISaveChanges.cs" />
+    <Compile Include="..\src\IWithSelection.cs" Link="IWithSelection.cs" />
+    <Compile Include="..\src\Notifications\NotificationsHelper.cs" Link="Notifications\NotificationsHelper.cs" />
+    <Compile Include="..\src\PagingItemListViewModel.cs" Link="PagingItemListViewModel.cs" />
+    <Compile Include="..\src\PagingItemListViewModel.WithSelection.cs" Link="PagingItemListViewModel.WithSelection.cs" />
+    <Compile Include="..\src\PagingItemListViewModelBase.cs" Link="PagingItemListViewModelBase.cs" />
+    <Compile Include="..\src\ResultEventArgs.cs" Link="ResultEventArgs.cs" />
+    <Compile Include="..\src\ShouldDisplayErrorInfoAttribute.cs" Link="ShouldDisplayErrorInfoAttribute.cs" />
+    <Compile Include="..\src\VirtualContainer.Collection.cs" Link="VirtualContainer.Collection.cs" />
+    <Compile Include="..\src\VirtualContainer.cs" Link="VirtualContainer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Notifications\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Caliburn.Micro.Core" Version="3.2.0" />
+  </ItemGroup>
+
+</Project>
