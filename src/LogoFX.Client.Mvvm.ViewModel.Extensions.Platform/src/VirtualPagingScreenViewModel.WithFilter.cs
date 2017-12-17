@@ -1,5 +1,5 @@
 ﻿using System;
-#if NET45
+#if NET
 using System.ComponentModel;
 #endif
 #if WINDOWS_UWP || NETFX_CORE

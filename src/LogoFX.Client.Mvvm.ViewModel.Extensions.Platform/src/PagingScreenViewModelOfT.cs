@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
-#if NET45
+#if NET
 using System.ComponentModel;
 #endif
 using System.Linq;
 using System.Threading.Tasks;
-#if NET45
+#if NET
 using System.Windows.Data;
 #endif
 #if WINDOWS_UWP || NETFX_CORE
@@ -352,7 +352,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
             {
                 return;
             }
-#if NET45
+#if NET
             CollectionView.Refresh();
 #endif
             OnRefresh();
@@ -526,7 +526,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
         protected virtual ICollectionView CreateCollectionView()
         {
             var collectionView =
-#if NET45
+#if NET
                 CollectionViewSource.GetDefaultView(Items);
 #endif
 #if WINDOWS_UWP || NETFX_CORE                
