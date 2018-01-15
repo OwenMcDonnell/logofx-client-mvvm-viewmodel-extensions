@@ -10,7 +10,7 @@ using Xunit;
 namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
 {    
     public class EditableScreenObjectViewModelTests : IntegrationTestsBase<TestConductorViewModel, TestBootstrapper>
-    {
+    {        
         //Note: may use here IntegrationTestsBaseWithActivation as well - package still not available.
         protected override TestConductorViewModel CreateRootObjectOverride(TestConductorViewModel rootObject)
         {
