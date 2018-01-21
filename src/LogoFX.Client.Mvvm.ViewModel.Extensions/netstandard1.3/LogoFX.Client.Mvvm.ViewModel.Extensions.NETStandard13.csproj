@@ -30,4 +30,14 @@
     <Folder Include="Notifications\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Core" Version="1.1.1-rc2" />
+    <PackageReference Include="LogoFX.Core" Version="1.1.1-rc2" />
+    <PackageReference Include="System.ComponentModel" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Shared\netstandard1.3\LogoFX.Client.Mvvm.ViewModel.Shared.NETStandard13.csproj" />
+  </ItemGroup>
+
 </Project>
