@@ -105,8 +105,8 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\src\EditableObjectViewModel.cs">
-      <Link>EditableObjectViewModel.cs</Link>
+    <Compile Include="..\src\BusyScreen.cs">
+      <Link>BusyScreen.cs</Link>
     </Compile>
     <Compile Include="..\src\EditablePagingItemViewModel.cs">
       <Link>EditablePagingItemViewModel.cs</Link>
@@ -126,11 +126,11 @@
     <Compile Include="..\src\FilterViewModelBase.cs">
       <Link>FilterViewModelBase.cs</Link>
     </Compile>
-    <Compile Include="..\src\IEditableViewModel.cs">
-      <Link>IEditableViewModel.cs</Link>
-    </Compile>
     <Compile Include="..\src\IPageInfo.cs">
       <Link>IPageInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\src\PagingScreenViewModel.cs">
+      <Link>PagingScreenViewModel.cs</Link>
     </Compile>
     <Compile Include="..\src\PagingScreenViewModelOfT.cs">
       <Link>PagingScreenViewModelOfT.cs</Link>
