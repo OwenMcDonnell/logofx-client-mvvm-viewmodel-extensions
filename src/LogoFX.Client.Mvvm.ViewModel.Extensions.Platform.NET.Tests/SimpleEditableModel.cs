@@ -41,7 +41,6 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
 
     interface ICompositeEditableModel : IEditableModel
     {
-        [EditableList]
         IEnumerable<int> Phones { get; }
 
         ISimpleEditableModel Person { get; set; }
