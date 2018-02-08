@@ -111,9 +111,6 @@
     <Compile Include="..\src\EditablePagingScreenViewModel.WithFilter.cs">
       <Link>EditablePagingScreenViewModel.WithFilter.cs</Link>
     </Compile>
-    <Compile Include="..\src\EditableScreenObjectViewModel.cs">
-      <Link>EditableScreenObjectViewModel.cs</Link>
-    </Compile>
     <Compile Include="..\src\FilterViewModelBase.cs">
       <Link>FilterViewModelBase.cs</Link>
     </Compile>

@@ -15,6 +15,7 @@
     <Compile Include="..\src\BusyScreen.cs" Link="BusyScreen.cs" />
     <Compile Include="..\src\EditableObjectViewModel.cs" Link="EditableObjectViewModel.cs" />
     <Compile Include="..\src\EditablePagingItemViewModel.cs" Link="EditablePagingItemViewModel.cs" />
+    <Compile Include="..\src\EditableScreenObjectViewModel.cs" Link="EditableScreenObjectViewModel.cs" />
     <Compile Include="..\src\ErrorInfoViewModel.cs" Link="ErrorInfoViewModel.cs" />
     <Compile Include="..\src\IEditableViewModel.cs" Link="IEditableViewModel.cs" />
     <Compile Include="..\src\IPagingItem.cs" Link="IPagingItem.cs" />
