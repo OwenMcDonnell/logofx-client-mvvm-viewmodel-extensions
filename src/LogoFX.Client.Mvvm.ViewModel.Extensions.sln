@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Mvvm.ViewModel.Services.Platform.UWP", "LogoFX.Client.Mvvm.ViewModel.Services.Platform\uwp\LogoFX.Client.Mvvm.ViewModel.Services.Platform.UWP.csproj", "{8FC658E5-3ACD-4297-907A-BEAFC031865B}"
 EndProject
@@ -25,8 +25,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogoFX.Client.Mvvm.ViewMode
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogoFX.Client.Mvvm.ViewModel.Services.Middleware.NETStandard20", "LogoFX.Client.Mvvm.ViewModel.Services.Middleware\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Services.Middleware.NETStandard20.csproj", "{FE4714D8-4A1E-4EA6-B461-C40EDBC12A60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Mvvm.ViewModel.Extensions.Platform.NET.Tests", "LogoFX.Client.Mvvm.ViewModel.Extensions.Platform.NET.Tests\LogoFX.Client.Mvvm.ViewModel.Extensions.Platform.NET.Tests.csproj", "{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Mvvm.ViewModel.Services.Platform.NET", "LogoFX.Client.Mvvm.ViewModel.Services.Platform\net\LogoFX.Client.Mvvm.ViewModel.Services.Platform.NET.csproj", "{EF9F60DB-C87B-448B-A6BD-ACB13DF51C94}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Mvvm.ViewModel.Extensions.Platform.NET", "LogoFX.Client.Mvvm.ViewModel.Extensions.Platform\net\LogoFX.Client.Mvvm.ViewModel.Extensions.Platform.NET.csproj", "{F7E89E24-85A4-4B72-B726-AF623A039E3D}"
@@ -34,6 +32,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogoFX.Client.Mvvm.ViewModel.Extensions.NETStandard13", "LogoFX.Client.Mvvm.ViewModel.Extensions\netstandard1.3\LogoFX.Client.Mvvm.ViewModel.Extensions.NETStandard13.csproj", "{8F5F19E3-2A74-4653-8688-E6BCD9FC1580}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogoFX.Client.Mvvm.ViewModel.Extensions.NETStandard20", "LogoFX.Client.Mvvm.ViewModel.Extensions\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Extensions.NETStandard20.csproj", "{E52DDAED-B55A-487B-8180-BEFC343ACBBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Mvvm.ViewModel.Extensions.NETStandard20.Tests", "LogoFX.Client.Mvvm.ViewModel.Extensions.NETStandard20.Tests\LogoFX.Client.Mvvm.ViewModel.Extensions.NETStandard20.Tests.csproj", "{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -175,22 +175,6 @@ Global
 		{FE4714D8-4A1E-4EA6-B461-C40EDBC12A60}.Release|x64.Build.0 = Release|Any CPU
 		{FE4714D8-4A1E-4EA6-B461-C40EDBC12A60}.Release|x86.ActiveCfg = Release|Any CPU
 		{FE4714D8-4A1E-4EA6-B461-C40EDBC12A60}.Release|x86.Build.0 = Release|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|ARM.Build.0 = Debug|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|x64.Build.0 = Debug|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|x86.Build.0 = Debug|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|ARM.ActiveCfg = Release|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|ARM.Build.0 = Release|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|x64.ActiveCfg = Release|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|x64.Build.0 = Release|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|x86.ActiveCfg = Release|Any CPU
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|x86.Build.0 = Release|Any CPU
 		{EF9F60DB-C87B-448B-A6BD-ACB13DF51C94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EF9F60DB-C87B-448B-A6BD-ACB13DF51C94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF9F60DB-C87B-448B-A6BD-ACB13DF51C94}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -255,6 +239,22 @@ Global
 		{E52DDAED-B55A-487B-8180-BEFC343ACBBB}.Release|x64.Build.0 = Release|Any CPU
 		{E52DDAED-B55A-487B-8180-BEFC343ACBBB}.Release|x86.ActiveCfg = Release|Any CPU
 		{E52DDAED-B55A-487B-8180-BEFC343ACBBB}.Release|x86.Build.0 = Release|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|ARM.Build.0 = Debug|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|x64.Build.0 = Debug|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Debug|x86.Build.0 = Debug|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|ARM.ActiveCfg = Release|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|ARM.Build.0 = Release|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|x64.ActiveCfg = Release|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|x64.Build.0 = Release|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|x86.ActiveCfg = Release|Any CPU
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -268,11 +268,11 @@ Global
 		{A66D81BD-6E86-4FB5-A185-CEA16C26AEC1} = {2680E284-6575-4497-BE0D-24780F67D772}
 		{650E02AA-960F-4082-972F-DB1CC7209A3F} = {8D9B8E75-4022-469F-BC09-B7A47E8DBA70}
 		{FE4714D8-4A1E-4EA6-B461-C40EDBC12A60} = {8D9B8E75-4022-469F-BC09-B7A47E8DBA70}
-		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B} = {4020C2D3-429B-4C64-A0CB-D830DCAB2FCB}
 		{EF9F60DB-C87B-448B-A6BD-ACB13DF51C94} = {8D9B8E75-4022-469F-BC09-B7A47E8DBA70}
 		{F7E89E24-85A4-4B72-B726-AF623A039E3D} = {4020C2D3-429B-4C64-A0CB-D830DCAB2FCB}
 		{8F5F19E3-2A74-4653-8688-E6BCD9FC1580} = {4020C2D3-429B-4C64-A0CB-D830DCAB2FCB}
 		{E52DDAED-B55A-487B-8180-BEFC343ACBBB} = {4020C2D3-429B-4C64-A0CB-D830DCAB2FCB}
+		{87F99EDC-3500-4710-8AE7-3ADE9F4AAC8B} = {4020C2D3-429B-4C64-A0CB-D830DCAB2FCB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {235788DA-BB0A-4980-B70A-8DF3CC671806}
