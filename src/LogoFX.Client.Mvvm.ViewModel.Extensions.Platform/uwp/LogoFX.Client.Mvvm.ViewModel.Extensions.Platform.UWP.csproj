@@ -105,9 +105,6 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\src\BusyScreen.cs">
-      <Link>BusyScreen.cs</Link>
-    </Compile>
     <Compile Include="..\src\EditablePagingScreenViewModel.cs">
       <Link>EditablePagingScreenViewModel.cs</Link>
     </Compile>
