@@ -153,7 +153,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
 
             var phones = ((ICompositeEditableModel)compositeModel).Phones.ToArray();
             var expectedPhones = new[] { 546, 432, 647 };
-            phones.ShouldBeEquivalentTo(expectedPhones);            
+            phones.Should().BeEquivalentTo(expectedPhones);
         }
     }
 }
