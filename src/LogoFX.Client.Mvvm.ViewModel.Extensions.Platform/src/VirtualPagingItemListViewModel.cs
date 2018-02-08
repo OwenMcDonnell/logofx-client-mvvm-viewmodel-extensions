@@ -3,7 +3,7 @@ using LogoFX.Client.Mvvm.ViewModel.Contracts;
 namespace LogoFX.Client.Mvvm.ViewModel.Extensions
 {
     /// <summary>
-    /// Represents paging list manager for specific model and suport for virtualization.
+    /// Represents paging list manager for specific model and support for virtualization.
     /// </summary>
     /// <typeparam name="TItem">The type of the item.</typeparam>
     /// <typeparam name="TModel">The type of the model.</typeparam>

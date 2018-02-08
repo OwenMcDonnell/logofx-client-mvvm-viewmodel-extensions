@@ -32,14 +32,14 @@
     <DocumentationFile>..\..\Bin\net\Release\LogoFX.Client.Mvvm.ViewModel.Extensions.Platform.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Caliburn.Micro, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Caliburn.Micro.Core.3.2.0\lib\net45\Caliburn.Micro.dll</HintPath>
+    <Reference Include="Caliburn.Micro, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Caliburn.Micro.Core.4.0.0-alpha.1\lib\netstandard1.0\Caliburn.Micro.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Core, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LogoFX.Client.Core.Core.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Core.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Core.Platform, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LogoFX.Client.Core.1.2.1-rc2\lib\net461\LogoFX.Client.Core.Platform.dll</HintPath>
+      <HintPath>..\..\packages\LogoFX.Client.Core.1.2.1-rc3\lib\net461\LogoFX.Client.Core.Platform.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.Commanding, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LogoFX.Client.Mvvm.Commanding.Core.1.1.1-rc3\lib\netstandard2.0\LogoFX.Client.Mvvm.Commanding.dll</HintPath>
@@ -48,10 +48,10 @@
       <HintPath>..\..\packages\LogoFX.Client.Mvvm.Core.1.1.1-rc2\lib\net461\LogoFX.Client.Mvvm.Core.Platform.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.Model, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LogoFX.Client.Mvvm.Model.1.1.1-rc2\lib\netstandard2.0\LogoFX.Client.Mvvm.Model.dll</HintPath>
+      <HintPath>..\..\packages\LogoFX.Client.Mvvm.Model.1.1.1-rc3\lib\netstandard2.0\LogoFX.Client.Mvvm.Model.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.Model.Contracts, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LogoFX.Client.Mvvm.Model.1.1.1-rc2\lib\netstandard2.0\LogoFX.Client.Mvvm.Model.Contracts.dll</HintPath>
+      <HintPath>..\..\packages\LogoFX.Client.Mvvm.Model.1.1.1-rc3\lib\netstandard2.0\LogoFX.Client.Mvvm.Model.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.ViewModel, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LogoFX.Client.Mvvm.ViewModel.Core.1.1.1-rc2\lib\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.dll</HintPath>
@@ -76,12 +76,16 @@
       <HintPath>..\..\packages\Solid.Patterns.Memento.1.2.1-rc2\lib\netstandard2.0\Solid.Patterns.Memento.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.IoC, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Solid.Practices.IoC.1.2.1-rc2\lib\netstandard2.0\Solid.Practices.IoC.dll</HintPath>
+      <HintPath>..\..\packages\Solid.Practices.IoC.1.2.1-rc4\lib\netstandard2.0\Solid.Practices.IoC.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.Middleware, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Solid.Practices.Middleware.1.2.1-rc2\lib\netstandard2.0\Solid.Practices.Middleware.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Reactive.Core, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Reactive.Core.3.1.1\lib\net46\System.Reactive.Core.dll</HintPath>
@@ -104,41 +108,26 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\src\EditableObjectViewModel.cs">
-      <Link>EditableObjectViewModel.cs</Link>
-    </Compile>
-    <Compile Include="..\src\EditablePagingItemViewModel.cs">
-      <Link>EditablePagingItemViewModel.cs</Link>
-    </Compile>
     <Compile Include="..\src\EditablePagingScreenViewModel.cs">
       <Link>EditablePagingScreenViewModel.cs</Link>
     </Compile>
     <Compile Include="..\src\EditablePagingScreenViewModel.WithFilter.cs">
       <Link>EditablePagingScreenViewModel.WithFilter.cs</Link>
     </Compile>
-    <Compile Include="..\src\EditableScreenObjectViewModel.cs">
-      <Link>EditableScreenObjectViewModel.cs</Link>
-    </Compile>
-    <Compile Include="..\src\ErrorInfoViewModel.cs">
-      <Link>ErrorInfoViewModel.cs</Link>
-    </Compile>
     <Compile Include="..\src\FilterViewModelBase.cs">
       <Link>FilterViewModelBase.cs</Link>
     </Compile>
-    <Compile Include="..\src\IEditableViewModel.cs">
-      <Link>IEditableViewModel.cs</Link>
-    </Compile>
     <Compile Include="..\src\IPageInfo.cs">
       <Link>IPageInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\src\PagingScreenViewModel.cs">
+      <Link>PagingScreenViewModel.cs</Link>
     </Compile>
     <Compile Include="..\src\PagingScreenViewModelOfT.cs">
       <Link>PagingScreenViewModelOfT.cs</Link>
     </Compile>
     <Compile Include="..\src\PagingScreenViewModelOfT.WithFilter.cs">
       <Link>PagingScreenViewModelOfT.WithFilter.cs</Link>
-    </Compile>
-    <Compile Include="..\src\ScreenObjectViewModel.cs">
-      <Link>ScreenObjectViewModel.cs</Link>
     </Compile>
     <Compile Include="..\src\VirtualPagingItemListViewModel.cs">
       <Link>VirtualPagingItemListViewModel.cs</Link>
@@ -163,9 +152,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Extensions\net\LogoFX.Client.Mvvm.ViewModel.Extensions.NET.csproj">
-      <Project>{1b2ec639-365c-4aa1-8151-ded87a8b6113}</Project>
-      <Name>LogoFX.Client.Mvvm.ViewModel.Extensions.NET</Name>
+    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Extensions\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Extensions.NETStandard20.csproj">
+      <Project>{e52ddaed-b55a-487b-8180-befc343acbbb}</Project>
+      <Name>LogoFX.Client.Mvvm.ViewModel.Extensions.NETStandard20</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Shared\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Shared.NETStandard20.csproj">
       <Project>{a66d81bd-6e86-4fb5-a185-cea16c26aec1}</Project>
