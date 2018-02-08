@@ -135,9 +135,6 @@
     <Compile Include="..\src\PagingScreenViewModelOfT.WithFilter.cs">
       <Link>PagingScreenViewModelOfT.WithFilter.cs</Link>
     </Compile>
-    <Compile Include="..\src\ScreenObjectViewModel.cs">
-      <Link>ScreenObjectViewModel.cs</Link>
-    </Compile>
     <Compile Include="..\src\VirtualPagingItemListViewModel.cs">
       <Link>VirtualPagingItemListViewModel.cs</Link>
     </Compile>
