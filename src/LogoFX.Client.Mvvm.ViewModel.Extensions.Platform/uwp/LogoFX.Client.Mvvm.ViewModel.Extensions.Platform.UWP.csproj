@@ -117,9 +117,6 @@
     <Compile Include="..\src\EditableScreenObjectViewModel.cs">
       <Link>EditableScreenObjectViewModel.cs</Link>
     </Compile>
-    <Compile Include="..\src\ErrorInfoViewModel.cs">
-      <Link>ErrorInfoViewModel.cs</Link>
-    </Compile>
     <Compile Include="..\src\FilterViewModelBase.cs">
       <Link>FilterViewModelBase.cs</Link>
     </Compile>
