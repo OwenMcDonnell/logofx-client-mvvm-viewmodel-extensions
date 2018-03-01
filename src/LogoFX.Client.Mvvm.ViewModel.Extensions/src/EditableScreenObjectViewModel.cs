@@ -24,9 +24,12 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
         protected EditableScreenObjectViewModel(T model)
             : base(model)
         {
-            Model.NotifyOn("IsDirty", (o, o1) => NotifyOfPropertyChange(() => IsDirty));
-            Model.NotifyOn("CanCancelChanges", (o, o1) => NotifyOfPropertyChange(() => CanCancelChanges));
-            Model.NotifyOn("Error", (o, o1) => NotifyOfPropertyChange(() => HasErrors));
+            if (Model is INotifyPropertyChanged inpc)
+            {
+                inpc.NotifyOn("IsDirty", (o, o1) => NotifyOfPropertyChange(() => IsDirty));
+                inpc.NotifyOn("CanCancelChanges", (o, o1) => NotifyOfPropertyChange(() => CanCancelChanges));
+                inpc.NotifyOn("Error", (o, o1) => NotifyOfPropertyChange(() => HasErrors));
+            }               
         }
 
 #region Commands

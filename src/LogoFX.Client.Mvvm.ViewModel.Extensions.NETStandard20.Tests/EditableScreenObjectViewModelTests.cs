@@ -22,7 +22,36 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions.Tests
         {
             base.OnAfterTeardown();
             TestHelper.Teardown();
-        }        
+        }
+
+        [Fact]
+        public void ModelIsChanged_ViewModelRaisesNotifications()
+        {
+            var simpleModel = new SimpleEditableModel();           
+            var mockMessageService = new FakeMessageService();
+
+            var rootObject = CreateRootObject();
+            var screenObjectViewModel = new TestEditableScreenSimpleObjectViewModel(mockMessageService, simpleModel);
+            bool wasDirtyRaised = false, wasCancelChangesRaised = false;
+
+            screenObjectViewModel.PropertyChanged += (sender, args) =>
+            {
+                switch (args.PropertyName)
+                {
+                    case "IsDirty":
+                        wasDirtyRaised = true;
+                        break;
+                    case "CanCancelChanges":
+                        wasCancelChangesRaised = true;
+                        break;
+                }
+            };
+            rootObject.ActivateItem(screenObjectViewModel);
+            simpleModel.Name = DataGenerator.ValidName;
+
+            wasDirtyRaised.Should().BeTrue();
+            wasCancelChangesRaised.Should().BeTrue();
+        }
 
         [Fact]        
         public void ModelIsChanged_WhenViewModelIsClosed_MessageBoxIsDisplayed()

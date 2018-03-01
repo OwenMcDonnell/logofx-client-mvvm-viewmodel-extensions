@@ -1,7 +1,5 @@
 ﻿using System;
-#if NETSTANDARD2_0
 using System.ComponentModel;
-#endif
 using System.Threading.Tasks;
 using System.Windows.Input;
 using LogoFX.Client.Mvvm.Commanding;
@@ -21,7 +19,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
 #endif
         where T : IEditableModel, IHaveErrors
 #if NETSTANDARD2_0
-        , IDataErrorInfo
+        ,IDataErrorInfo
 #endif
     {
         /// <summary>
@@ -31,9 +29,12 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
         protected EditableObjectViewModel(T model)
             : base(model)
         {
-            Model.NotifyOn("IsDirty", (o, o1) => NotifyOfPropertyChange(() => IsDirty));
-            Model.NotifyOn("CanCancelChanges", (o, o1) => NotifyOfPropertyChange(() => CanCancelChanges));
-            Model.NotifyOn("Error", (o, o1) => NotifyOfPropertyChange(() => HasErrors));
+            if (Model is INotifyPropertyChanged inpc)
+            {
+                inpc.NotifyOn("IsDirty", (o, o1) => NotifyOfPropertyChange(() => IsDirty));
+                inpc.NotifyOn("CanCancelChanges", (o, o1) => NotifyOfPropertyChange(() => CanCancelChanges));
+                inpc.NotifyOn("Error", (o, o1) => NotifyOfPropertyChange(() => HasErrors));
+            }           
         }
 
 #region Commands
