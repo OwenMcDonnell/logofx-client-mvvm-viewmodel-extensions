@@ -214,12 +214,14 @@
   <ItemGroup>
     <Compile Include="CompositeEditableModel.cs" />
     <Compile Include="DataGenerator.cs" />
+    <Compile Include="EditableObjectViewModelTests.cs" />
     <Compile Include="EditableScreenObjectViewModelTests.cs" />
     <Compile Include="FakeMessageService.cs" />
     <Compile Include="NameValidationAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleEditableModel.cs" />
     <Compile Include="TestBootstrapper.cs" />
+    <Compile Include="TestEditableObjectViewModel.cs" />
     <Compile Include="TestEditableScreenObjectViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
