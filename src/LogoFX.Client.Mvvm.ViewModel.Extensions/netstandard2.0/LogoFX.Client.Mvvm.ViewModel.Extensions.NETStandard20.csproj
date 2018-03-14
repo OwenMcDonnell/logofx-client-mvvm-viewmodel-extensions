@@ -5,6 +5,8 @@
     <AssemblyName>LogoFX.Client.Mvvm.ViewModel.Extensions</AssemblyName>
     <RootNamespace>LogoFX.Client.Mvvm.ViewModel.Extensions</RootNamespace>
     <Version>1.2.1</Version>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>LogoFX.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -39,15 +41,38 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Caliburn.Micro.Core" Version="4.0.0-alpha.1" />
-    <PackageReference Include="LogoFX.Client.Mvvm.Commanding.Core" Version="1.1.1-rc3" />
-    <PackageReference Include="LogoFX.Client.Mvvm.Model" Version="1.1.1-rc3" />
-    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Core" Version="1.1.1-rc2" />
-    <PackageReference Include="LogoFX.Core" Version="1.1.1-rc2" />
+    <PackageReference Include="System.Reactive" Version="3.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Shared\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Shared.NETStandard20.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Caliburn.Micro">
+      <HintPath>..\..\Lib\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Core">
+      <HintPath>..\..\Lib\LogoFX.Client.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.Commanding">
+      <HintPath>..\..\Lib\LogoFX.Client.Mvvm.Commanding.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.Model">
+      <HintPath>..\..\Lib\LogoFX.Client.Mvvm.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.Model.Contracts">
+      <HintPath>..\..\Lib\LogoFX.Client.Mvvm.Model.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.ViewModel">
+      <HintPath>..\..\Lib\LogoFX.Client.Mvvm.ViewModel.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.ViewModel.Contracts">
+      <HintPath>..\..\Lib\LogoFX.Client.Mvvm.ViewModel.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Core">
+      <HintPath>..\..\Lib\LogoFX.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

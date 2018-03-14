@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LogoFX.Client.Mvvm.Model.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.ICanBeDirty">
+            <summary>
+            Represents an object that can be dirty and allows managing dirty state
+            </summary>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.ICanBeDirty.IsDirty">
+            <summary>
+            True, if there is a change in the object, false otherwise
+            </summary>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.ICanBeDirty.MakeDirty">
+            <summary>
+            Marks object as dirty
+            </summary>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.ICanBeDirty.ClearDirty(System.Boolean)">
+            <summary>
+            Clears dirty state of the object, optionally propagating the change to its children
+            </summary>
+            <param name="forceClearChildren">True, if children dirty state should be cleared too, false otherwise</param>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.ICanCancelChanges">
+            <summary>
+            Represents an object that is able to cancel model changes
+            </summary>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.ICanCancelChanges.CancelChanges">
+            <summary>
+            Cancels all changes and rolls back to the initial object state
+            </summary>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.ICanCancelChanges.CanCancelChanges">
+            <summary>
+            Gets or sets the value indicating whether object changes can be cancelled
+            </summary>        
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.ICanCommitChanges">
+            <summary>
+            Represents an object that is able to commit model changes
+            </summary>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.ICanCommitChanges.CommitChanges">
+            <summary>
+            Commits the changes and cleans up the dirty (being edited) object state.
+            </summary>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.ICanCommitChanges.CanCommitChanges">
+            <summary>
+            Gets a value indicating whether the model changes can be committed.
+            </summary>
+            <value>
+            <c>true</c> if the model changes can be committed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IClientModel">
+            <summary>
+            Represents client model
+            </summary>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.IClientModel.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IValueObject">
+            <summary>
+            Represents value object
+            </summary>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IService">
+            <summary>
+            Represents service
+            </summary>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IEntity`1">
+            <summary>
+            Represents entity with identifier.
+            </summary>
+            <typeparam name="TEntityId">The type of the entity identifier.</typeparam>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IEntity`1.EntityId">
+            <summary>
+            Gets the entity identifier.
+            </summary>
+            <value>
+            The entity identifier.
+            </value>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IEntityId`1">
+            <summary>
+            Represents entity identifier
+            </summary>
+            <typeparam name="TEntityId">The type of the entity identifier.</typeparam>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IEntityId`1.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IIsDirty">
+            <summary>
+            Represents an object which can manage dirty state.
+            </summary>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IIsDirty.IsDirty">
+            <summary>
+            Gets a value indicating whether this instance is dirty.
+            </summary>
+            <value>
+              <c>true</c> if this instance is dirty; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="E:LogoFX.Client.Mvvm.Model.Contracts.IIsDirty.IsDirtyChanged">
+            <summary>
+            Raised when dirty state is changed.
+            </summary>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.IIsDirty.ClearDirty">
+            <summary>
+            Clears the dirty state.
+            </summary>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IEditableClientModel`1">
+            <summary>
+            Represents editable client model
+            </summary>
+            <typeparam name="TId"></typeparam>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.ICloneable`1">
+            <summary>
+            Represents cloneable instance
+            </summary>
+            <typeparam name="T">Type of instance to be cloned</typeparam>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.ICloneable`1.Clone">
+            <summary>
+            Clones this instance.
+            </summary>
+            <returns>Cloned instance</returns>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.ICopyable`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.ICopyable`1.CopyTo(`0)">
+            <summary>
+            Copies to.
+            </summary>
+            <param name="to">To.</param>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IEditableModel">
+            <summary>
+            Represents editable model
+            </summary>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IFilterModel">
+            <summary>
+            Represents filter model
+            </summary>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IHaveExternalErrors">
+            <summary>
+            Represents object that allows managing collection of external errors
+            </summary>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.IHaveExternalErrors.SetError(System.String,System.String)">
+            <summary>
+            Sets external error to the specific property
+            </summary>
+            <param name="error">External error</param>
+            <param name="propertyName">Property name</param>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.IHaveExternalErrors.ClearError(System.String)">
+            <summary>
+            Clears external error from the specific property
+            </summary>
+            <param name="propertyName">Property name</param>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IHaveErrors">
+            <summary>
+            Represents object that allows managing collection of errors
+            </summary>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IHaveErrors.HasErrors">
+            <summary>
+            True if object has errors, false otherwise
+            </summary>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IHaveId`1">
+            <summary>
+            Represents object with an identifier
+            </summary>
+            <typeparam name="T">Type of identifier</typeparam>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IHaveId`1.Id">
+            <summary>
+            Gets or sets the identifier
+            </summary>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IInfoModelsCollection">
+            <summary>
+            Contains information about models collection
+            </summary>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IInfoModelsCollection.ItemsCount">
+            <summary>
+            Overall items count
+            </summary>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IInfoModelsCollection.HasItems">
+            <summary>
+            True if collection contains items, false otherwise
+            </summary>
+        </member>
+        <member name="E:LogoFX.Client.Mvvm.Model.Contracts.IInfoModelsCollection.HasItemsChanged">
+            <summary>
+            Raised when <see cref="P:LogoFX.Client.Mvvm.Model.Contracts.IInfoModelsCollection.HasItems"/> is changed
+            </summary>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IMergeable`1">
+            <summary>
+            Represents an object that can be merged into another object
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.IMergeable`1.Merge(`0)">
+            <summary>
+            Merges the specified object.
+            </summary>
+            <param name="tomerge">The object to merge.</param>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IModel`1">
+            <summary>
+            Represents model with basic support for property notifications and built-in Id
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IModel`1.Name">
+            <summary>
+            Model name
+            </summary>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IModel`1.Description">
+            <summary>
+            Model description
+            </summary>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IModel">
+            <summary>
+            Represents model with <see cref="T:System.Int32"/> as identifier.
+            </summary>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IModelsCollection`1">
+            <summary>
+            Represents models collection
+            </summary>
+            <typeparam name="TItem">Type of model</typeparam>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IObjectModel`1">
+            <summary>
+            Denotes model that wraps foreign object
+            </summary>
+            <typeparam name="T">type of object wrapped</typeparam>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IObjectModel`1.Object">
+            <summary>
+            Gets the object.
+            </summary>
+            <value>
+            The object.
+            </value>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IObjectModel">
+            <summary>
+            Denotes model that wraps any foreign object
+            </summary>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IPropertyData">
+            <summary>
+            Represents property data
+            </summary>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IPropertyData.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IPropertyData.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IPropertyData.HaveDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IPropertyData.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IPropertyData.DisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IReadModelsCollection`1">
+            <summary>
+            Represents read-only collection of models
+            </summary>
+            <typeparam name="TItem">Type of model</typeparam>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IReadModelsCollection`1.Items">
+            <summary>
+            Gets the collection items
+            </summary>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IUndoRedo">
+            <summary>
+            Represents an object which is capable of managing the history of changes 
+            and supports undo-redo operations
+            </summary>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IUndoRedo.CanUndo">
+            <summary>
+            Gets the value indicating whether the last change can be undone.
+            </summary>
+            <value>
+              <c>true</c> if this instance can be undone; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:LogoFX.Client.Mvvm.Model.Contracts.IUndoRedo.CanRedo">
+            <summary>
+            Gets the value indicating whether the last change can be redone.
+            </summary>
+            <value>
+              <c>true</c> if this instance can be redone; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.IUndoRedo.Undo">
+            <summary>
+            Cancels last change.
+            </summary>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.IUndoRedo.Redo">
+            <summary>
+            Re-applies latest change
+            </summary>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IWriteModelsCollection`1">
+            <summary>
+            Allows managing models collection
+            </summary>
+            <typeparam name="TItem">Type of model</typeparam>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.IWriteModelsCollection`1.Add(`0)">
+            <summary>
+            Adds the item to the collection.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.IWriteModelsCollection`1.Remove(`0)">
+            <summary>
+            Removes the specified item from the collection.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.IWriteModelsCollection`1.Update(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Updates the collecton with the specified items.
+            </summary>
+            <param name="items">The items.</param>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.IWriteModelsCollection`1.Clear">
+            <summary>
+            Clears the collection.
+            </summary>
+        </member>
+        <member name="T:LogoFX.Client.Mvvm.Model.Contracts.IWriteRangeModelsCollection`1">
+            <summary>
+            Represents collection of models which supports bulk operations
+            </summary>
+            <typeparam name="TItem"></typeparam>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.IWriteRangeModelsCollection`1.AddRange(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Adds the collection of items as bulk operation.
+            </summary>
+            <param name="items">The items.</param>
+        </member>
+        <member name="M:LogoFX.Client.Mvvm.Model.Contracts.IWriteRangeModelsCollection`1.RemoveRange(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Removes the collection of items as bulk operation.
+            </summary>
+            <param name="items">The items.</param>
+        </member>
+    </members>
+</doc>

@@ -5,6 +5,8 @@
     <AssemblyName>LogoFX.Client.Mvvm.ViewModel.Services</AssemblyName>
     <RootNamespace>LogoFX.Client.Mvvm.ViewModel.Services</RootNamespace>
     <Version>1.2.1</Version>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>LogoFX.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -19,12 +21,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory" Version="1.2.1-rc2" />
-    <PackageReference Include="Solid.Practices.IoC" Version="1.2.1-rc4" />
+    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Shared\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Shared.NETStandard20.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\LogoFX.Client.Mvvm.ViewModel.Shared\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Shared.NETStandard20.csproj" />
+    <Reference Include="LogoFX.Client.Mvvm.ViewModel.Contracts">
+      <HintPath>..\..\Lib\LogoFX.Client.Mvvm.ViewModel.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.ViewModelFactory">
+      <HintPath>..\..\Lib\LogoFX.Client.Mvvm.ViewModelFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.IoC">
+      <HintPath>..\..\Lib\Solid.Practices.IoC.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
