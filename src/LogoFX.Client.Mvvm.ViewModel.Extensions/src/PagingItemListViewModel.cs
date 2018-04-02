@@ -18,6 +18,8 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
     {
         #region Fields
 
+        private readonly object _syncObject = new object();
+
         private readonly Dictionary<TModel, TItem> _cache =
             new Dictionary<TModel, TItem>();
 
@@ -36,6 +38,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
             AddSourceImpl(source);
         }
 
+        #region Public Methods
 
         public void ClearSource()
         {
@@ -55,21 +58,6 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
             SourceCollectionChanged(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
         }
 
-        private void AddSourceImpl(IList<TModel> items)
-        {
-            Unsubscribe();
-            _source = items;
-            SourceCollectionChanged(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
-        }
-
-        private void Unsubscribe()
-        {
-            if (_source is INotifyCollectionChanged changed)
-            {
-                changed.CollectionChanged -= SourceCollectionChanged;
-            }
-        }
-
         #endregion
 
         #region Public Properties
@@ -80,6 +68,8 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
         /// <value>
         /// The parent.
         /// </value>
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
+        // ReSharper disable once MemberCanBePrivate.Global
         public object Parent { get; private set; }
 
         /// <summary>
@@ -90,7 +80,13 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
         /// </value>
         public override IEnumerable<TItem> CachedItems
         {
-            get { return _cache.Values; }
+            get
+            {
+                lock (_syncObject)
+                {
+                    return _cache.Values;
+                }
+            }
         }
 
         #endregion
@@ -114,17 +110,6 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
         }
 
         /// <summary>
-        /// Gets the synchronize object.
-        /// </summary>
-        /// <value>
-        /// The synchronize object.
-        /// </value>
-        protected object SyncObject
-        {
-            get { return _cache; }
-        }
-
-        /// <summary>
         /// Gets the item.
         /// </summary>
         /// <param name="model">The model.</param>
@@ -132,8 +117,8 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
         protected TItem GetItem(TModel model)
         {
             TItem item;
-            //TODO: Don't use the data as the synchronization object. Don't do this. Ever.
-            lock (SyncObject)
+
+            lock (_syncObject)
             {
                 if (!_cache.TryGetValue(model, out item))
                 {
@@ -148,6 +133,21 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
         #endregion
 
         #region Private Members
+
+        private void AddSourceImpl(IList<TModel> items)
+        {
+            Unsubscribe();
+            _source = items;
+            SourceCollectionChanged(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+        }
+
+        private void Unsubscribe()
+        {
+            if (_source is INotifyCollectionChanged changed)
+            {
+                changed.CollectionChanged -= SourceCollectionChanged;
+            }
+        }
 
         private void SourceCollectionChanged(object sender, NotifyCollectionChangedEventArgs args)
         {
