@@ -31,28 +31,43 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
         /// <param name="parent">The parent.</param>
         /// <param name="source">The source.</param>
         protected PagingItemListViewModel(object parent, IList<TModel> source)
-        {
-            _source = source;
+        {            
             Parent = parent;
-            var notify = source as INotifyCollectionChanged;
-            if (notify != null)
-            {
-                notify.CollectionChanged += SourceCollectionChanged;
-            }
+            AddSourceImpl(source);
         }
 
-        #region Public Methods
 
         public void ClearSource()
         {
+            Unsubscribe();
             _source = new List<TModel>();
             SourceCollectionChanged(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
         }
 
         public void AddSource(IList<TModel> items)
         {
+            if (_source is INotifyCollectionChanged changed)
+            {
+                changed.CollectionChanged -= SourceCollectionChanged;
+            }
+            _source = items;
+            
+            SourceCollectionChanged(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+        }
+
+        private void AddSourceImpl(IList<TModel> items)
+        {
+            Unsubscribe();
             _source = items;
             SourceCollectionChanged(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+        }
+
+        private void Unsubscribe()
+        {
+            if (_source is INotifyCollectionChanged changed)
+            {
+                changed.CollectionChanged -= SourceCollectionChanged;
+            }
         }
 
         #endregion
