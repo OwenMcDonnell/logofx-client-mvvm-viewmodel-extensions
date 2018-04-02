@@ -36,6 +36,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
             AddSourceImpl(source);
         }
 
+        #region
 
         public void ClearSource()
         {
@@ -46,13 +47,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
 
         public void AddSource(IList<TModel> items)
         {
-            if (_source is INotifyCollectionChanged changed)
-            {
-                changed.CollectionChanged -= SourceCollectionChanged;
-            }
-            _source = items;
-            
-            SourceCollectionChanged(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+            AddSourceImpl(items);
         }
 
         private void AddSourceImpl(IList<TModel> items)
