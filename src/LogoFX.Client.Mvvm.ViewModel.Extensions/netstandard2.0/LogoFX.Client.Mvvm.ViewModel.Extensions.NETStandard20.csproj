@@ -19,6 +19,7 @@
     <Compile Include="..\src\EditableScreenObjectViewModel.cs" Link="EditableScreenObjectViewModel.cs" />
     <Compile Include="..\src\ErrorInfoViewModel.cs" Link="ErrorInfoViewModel.cs" />
     <Compile Include="..\src\IEditableViewModel.cs" Link="IEditableViewModel.cs" />
+    <Compile Include="..\src\IHaveSubViewModel.cs" Link="IHaveSubViewModel.cs" />
     <Compile Include="..\src\IPagingItem.cs" Link="IPagingItem.cs" />
     <Compile Include="..\src\IPagingViewModel.cs" Link="IPagingViewModel.cs" />
     <Compile Include="..\src\ISaveChanges.cs" Link="ISaveChanges.cs" />
@@ -32,6 +33,7 @@
     <Compile Include="..\src\ShouldDisplayErrorInfoAttribute.cs" Link="ShouldDisplayErrorInfoAttribute.cs" />
     <Compile Include="..\src\VirtualContainer.Collection.cs" Link="VirtualContainer.Collection.cs" />
     <Compile Include="..\src\VirtualContainer.cs" Link="VirtualContainer.cs" />
+    <Compile Include="..\src\VirtualContainerViewModel.cs" Link="VirtualContainerViewModel.cs" />
   </ItemGroup>
 
   <ItemGroup>
