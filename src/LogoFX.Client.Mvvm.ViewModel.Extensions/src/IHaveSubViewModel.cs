@@ -1,4 +1,4 @@
-﻿namespace iXCapture.Processing.ViewModels
+﻿namespace LogoFX.Client.Mvvm.ViewModel.Extensions
 {
     public interface IHaveSubViewModel
     {

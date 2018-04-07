@@ -1,7 +1,7 @@
 ﻿using Caliburn.Micro;
 using LogoFX.Client.Mvvm.ViewModel.Contracts;
 
-namespace iXCapture.Processing.ViewModels
+namespace LogoFX.Client.Mvvm.ViewModel.Extensions
 {
     public abstract class VirtualContainerViewModel<TModel, TViewModel> : Conductor<TViewModel>, IModelWrapper<TModel>, IHaveSubViewModel
         where TViewModel : class, IModelWrapper<TModel>
