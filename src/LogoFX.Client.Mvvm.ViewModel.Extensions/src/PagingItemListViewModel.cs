@@ -21,7 +21,7 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
         private readonly Dictionary<TModel, TItem> _cache =
             new Dictionary<TModel, TItem>();
 
-        private readonly IList<TModel> _source;
+        private IList<TModel> _source;
 
         #endregion
 
@@ -40,6 +40,22 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
                 notify.CollectionChanged += SourceCollectionChanged;
             }
         }
+
+        #region Public Methods
+
+        public void ClearSource()
+        {
+            _source = new List<TModel>();
+            SourceCollectionChanged(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+        }
+
+        public void AddSource(IList<TModel> items)
+        {
+            _source = items;
+            SourceCollectionChanged(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+        }
+
+        #endregion
 
         #region Public Properties
 
