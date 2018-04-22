@@ -6,23 +6,14 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
     public abstract class VirtualContainerViewModel<TModel, TViewModel> : Conductor<TViewModel>, IModelWrapper<TModel>, IHaveSubViewModel
         where TViewModel : class, IModelWrapper<TModel>
     {
-        #region Fields
-
         private bool _isSubViewModelVisible;
         private TViewModel _subViewModel;
-
-        #endregion
-
-        #region Constructors
 
         protected VirtualContainerViewModel(TModel model)
         {
             Model = model;
         }
 
-        #endregion
-
-        #region Public Properties
 
         private bool _isSelected;
         public bool IsSelected
@@ -36,29 +27,17 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
             get { return GetSubViewModel(); }
         }
         
-        #endregion
-        
-        #region Protected
-
         protected abstract TViewModel CreateSubViewModel();
-
-        #endregion
-
-        #region Private
 
         private TViewModel GetSubViewModel()
         {
             return _subViewModel ?? (_subViewModel = CreateSubViewModel());
         }
 
-        private void UpdateSubModel()
+        private void UpdateSubViewModel()
         {
             ActivateItem(IsSubViewModelVisible ? GetSubViewModel() : null);
         }
-
-        #endregion
-
-        #region Overrides
 
         protected override void OnActivate()
         {
@@ -66,21 +45,13 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
 
             if (IsSubViewModelVisible)
             {
-                UpdateSubModel();
+                UpdateSubViewModel();
             }
         }
-
-        #endregion
-
-        #region IModelWrapper<TModel>
 
         object IModelWrapper.Model => Model;
 
         public TModel Model { get; private set; }
-
-        #endregion
-
-        #region IHaveSubViewModel
 
         public bool IsSubViewModelVisible
         {
@@ -89,11 +60,9 @@ namespace LogoFX.Client.Mvvm.ViewModel.Extensions
             {
                 if (Set(ref _isSubViewModelVisible, value))
                 {
-                    UpdateSubModel();
+                    UpdateSubViewModel();
                 }
             }
         }
-
-        #endregion
     }
 }
