@@ -4,9 +4,6 @@ before_build:
 - cd src
 - nuget restore
 
-environment:
-  APPVEYOR_RDP_PASSWORD: rdp-Password1!
-
 init:
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
