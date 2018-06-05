@@ -2,10 +2,7 @@ configuration: Release
 
 before_build:
 - cd src
-- nuget restore
-
-environment:		
-  APPVEYOR_RDP_PASSWORD: rdp-Password1!		
+- nuget restore		
 
 
 init:
